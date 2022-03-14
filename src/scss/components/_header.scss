@@ -1,0 +1,31 @@
+.header {
+    font-family: 'Jost', sans-serif;
+    background-color: hwb(240 1% 99%);
+    position: relative;
+    background-image: url(./../../images/header/background-mob.png);
+    
+    background-position: 50%;
+    background-repeat: no-repeat;
+    min-height: 568px;
+    &__shadow{
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 224px;
+        background: linear-gradient(rgba(2, 2, 3, 0.72), rgba(2, 2, 3, 0) 40%);
+    }
+    &__top {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(199, 161, 122, 0.2);
+    }
+
+    &__topText {
+        font-weight: 500;
+    }
+}
