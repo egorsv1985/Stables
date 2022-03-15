@@ -83,6 +83,7 @@ pre {
 
 a {
   background-color: transparent;
+  color: #fff;
 }
 
 /**
@@ -484,13 +485,71 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 14px;
+}
+
+.header__hr {
+  position: absolute;
+  top: 49px;
+  left: 0;
+  height: 0;
+  width: 100%;
+  border: none;
   border-bottom: 1px solid rgba(199, 161, 122, 0.2);
 }
 
 .header__topText {
-  font-family: "Jost", sans-serif;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  letter-spacing: 1px;
   font-weight: 400;
   font-size: 13px;
+}
+
+.header__burgerBtn {
+  margin-right: 48px;
+}
+
+.header__burgerSvg {
+  width: 24px;
+  height: 24px;
+}
+
+.header__bagBtn {
+  margin-left: 48px;
+}
+
+.header__bagSvg {
+  width: 24px;
+  height: 24px;
+}
+
+.header__navList {
+  display: none;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.header__navItem {
+  margin-right: 32px;
+}
+
+.header__contact {
+  display: none;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.header__order {
+  margin-left: 48px;
 }
 
 .news {
@@ -498,4 +557,41 @@ li {
   min-height: 800px;
 }
 
+@media (min-width: 376px) {
+  .header {
+    background-image: url(./../../images/header/video.png);
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__top {
+    height: 89px;
+  }
+
+  .header__hr {
+    display: none;
+  }
+
+  .header__navList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .header__contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .webp .header { background-image: url(./../../images/header/background-mob.webp); }
+
+@media (min-width: 376px) {
+
+  .webp .header { background-image: url(./../../images/header/video.webp); }
+}
