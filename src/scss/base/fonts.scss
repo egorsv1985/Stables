@@ -4,10 +4,7 @@
   font-style: normal;
   font-display: swap;
   src: local('Jost'), 
-      // url('./../fonts/Jost-Regular.woff2') format('woff2'),
-      // url('./../fonts/Jost-Regular.woff') format('woff'),
-      url('./../fonts/Jost-Regular.ttf') format('ttf'),
-      // url('./../fonts/Inter-Regular.eot') format('eot');
+      url('./../../fonts/Jost-Regular.ttf') format('ttf');
 }
 
 @font-face {
@@ -16,12 +13,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Jost'), 
-      // url('./../fonts/Jost-Regular.woff2') format('woff2'),
-      // url('./../fonts/Jost-Regular.woff') format('woff'),
-      url('./../fonts/Jost-Medium.ttf') format('ttf'),
-      // url('./../fonts/Jost-Regular.eot') format('eot');
+      url('./../../fonts/Jost-Medium.ttf') format('ttf');
+      
 }
-
 
 
 
