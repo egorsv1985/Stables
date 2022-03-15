@@ -1,125 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css">
-	
-		
-</head>
+<html lang="ru">
+@@include('html/head.html', {
+"title":"Конюшни"
+})
 
 <body>
-	@@include('html/header.html', {})
 	<!-- banquets 375px start -->
-	<div class="wrapper">
-		<div class="banquets">
-			<div class="container">
-				<div class="banquets__services">
-					<div class="banquets__services__title title">
-						<h2>Дополнительные услуги</h2>
-					</div>
-					<div class="banquets__services__description description">
-						<h3>Дополнительно к каждому пакетному предложению вы можете добавить следующие услуги:</h3>
-					</div>
-					<div class="banquets__services__content">
-						<div class="banquets__services__left-side">
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Праздничный торт</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>от 1000 ₽/кг</p>
-								</div>
-							</div>
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Фуршетный стол</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>от 600 ₽/персона</p>
-								</div>
-							</div>
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Винное сопровождение</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>от 500 ₽/персона</p>
-								</div>
-							</div>
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Паровые коктейли</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>от 850 ₽/шт</p>
-								</div>
-							</div>
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Работа DJ • 2 часа</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>от 3000 ₽</p>
-								</div>
-							</div>
-						</div>
-						<div class="banquets__services__right-side">
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Караоке • 4 часа</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>2500 ₽</p>
-								</div>
-							</div>
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Живая музыка</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>от 8000 ₽/час</p>
-								</div>
-							</div>
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Бармен-шоу</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>от 12000 ₽</p>
-								</div>
-							</div>
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Праздничное оформление зала</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>от 3000 ₽</p>
-								</div>
-							</div>
-							<div class="banquets__services__menu-item">
-								<div class="banquets__services-name">
-									<p>Фотограф</p>
-								</div>
-								<div class="banquets__services-price">
-									<p>от 2500 ₽/час</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="banquets__results"></div>
-			</div>
-		</div>
-	</div>
-
+<div class="container">
+	<section class="banquets">
+		@@include('html/section/banquets.html', {})
+	</section>
+	<section class="solution">
+		@@include('html/section/solution.html', {})
+	</section>
+	@@include('html/section/form.html', {
+		})
+	@@include('html/footer.html', {
+		})
+</div>
 	<!-- banquets 375px end -->
-
-	<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-	<script src="js/app.min.js"></script> -->
 </body>
 
 </html>

@@ -1,8 +1,61 @@
-body {
-  background-color: beige;
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.wrapper {
+.banquets__title {
+  font-family: "NewBaskervilleC";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.banquets__description {
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #503D3B;
+}
+
+.banquets__menu-price span, .banquets__menu-title span {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.container {
   margin: 0 auto;
   max-width: 375px;
+}
+
+.banquets {
+  padding: 32px 20px 16px;
+}
+.banquets__title {
+  max-width: 330px;
+}
+.banquets__description {
+  max-width: 315px;
+}
+.banquets__menu {
+  display: flex;
+  flex-direction: column;
+}
+.banquets__list {
+  display: flex;
+  border-top: 1px solid #E0E0E0;
+}
+.banquets__menu-title {
+  max-width: 151.5px;
+  margin-right: 32px;
+}
+.solution {
+  padding: 32px 20px 16px;
+  background-color: #FAF5F0;
 }

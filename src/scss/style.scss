@@ -1,9 +1,39 @@
-body {
-    background-color: beige;
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.wrapper {
-margin: 0 auto;
-max-width: 375px;
+%title-text {
+    font-family: 'NewBaskervilleC';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+%description-text {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #503D3B;
+}
+
+%price-text {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 375px;
 
 }
+
+@import 'banquets';
+@import 'solution';

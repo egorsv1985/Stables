@@ -1,0 +1,23 @@
+&__menu {
+    display: flex;
+    flex-direction: column;
+}
+
+&__list {
+    display: flex;
+    border-top: 1px solid #E0E0E0;
+  
+}
+&__menu-title{
+    max-width: 151.5px;
+    margin-right: 32px;
+    span {
+       @extend %price-text;
+    }
+}
+&__menu-price{
+
+    span {
+       @extend %price-text;
+    }
+}
