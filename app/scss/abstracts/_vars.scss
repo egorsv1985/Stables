@@ -1,0 +1,26 @@
+$accentColor: #503D3B;
+$titleColor: #010103;
+$bgColor: #FFF;
+
+$breakpoints: (
+ sm: 576px,
+ md: 768px,
+ lg: 1280px,
+ xl: 1440px,
+);
+
+%container {
+ padding: 0 15px; 
+ margin: 0 auto;
+ max-width: 1600px;
+ width: 100%;
+ @media screen and (min-width: 576px) {
+  padding: 0 35px;
+ }
+ @media screen and (min-width: 768px) {
+  padding: 0 50px;
+ }
+ @media screen and (min-width: 1280px) {
+  padding: 0;
+ }
+}

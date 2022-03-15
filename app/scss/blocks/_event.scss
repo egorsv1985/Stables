@@ -1,0 +1,67 @@
+.event {
+ background-color: $bgColor;
+ .container {
+  @extend %container;
+ }
+ &__top {
+
+ }
+ &__top-title {
+  @include text(32px, 1.2, $titleColor);
+  margin-bottom: 15px;
+ }
+ &__top-text {
+  @include text(16px, 1.5, $accentColor);
+  margin-bottom: 15px;
+ }
+ &__content-item {
+  padding: 15px 0 30px;
+  border-bottom: 1px solid #EFEFEF;
+ }
+ &__content-image {
+  object-fit: cover;
+  max-width: 335px;
+ }
+ &__info {
+
+ }
+ &__descr-title {
+  @include text(24px, 1.3, $accentColor);
+  margin-bottom: 8px;
+ }
+ &__descr-text {
+  @include text(16px, 1.6, $titleColor);
+  padding-bottom: 15px;
+  border-bottom: 1px solid #EFEFEF;
+ }
+ &__price,
+ &__capacity,
+ &__area {
+  display: flex;
+  align-items: center;
+  padding: 8px 0 16px;
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+  }
+ &__price-number,
+ &__capacity-number,
+ &__area-number {
+  @include text(40px, 1.2, #C7A17A);
+  padding-right: 15px;
+  width: 74px;
+ }
+ &__price-text,
+ &__capacity-text,
+ &__area-text{
+  @include text(16px, 1.5, $accentColor);
+   span {
+    color:#C7A17A; 
+   }
+ }
+
+
+
+ &__area {
+  border-bottom: none;
+ }
+}
