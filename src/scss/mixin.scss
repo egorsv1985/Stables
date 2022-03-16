@@ -4,6 +4,7 @@
 // minW768       min-width 768px
 // minW1024      min-width 1024px
 // minW1440      min-width 1440px
+// minW1592      min-width 1592px
 // minW1600      min-width 1600px
  
 @mixin maxW375 {
@@ -32,6 +33,12 @@
 
 @mixin minW1440 {
     @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin minW1592 {
+    @media (min-width: 1592px) {
         @content;
     }
 }

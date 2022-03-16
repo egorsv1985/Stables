@@ -6,29 +6,33 @@
     background-position: 50%;
     background-repeat: no-repeat;
     min-height: 568px;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 77px;
 
-    @include minW375{
+    @include minW375 {
         background-image: url(./../../images/header/video.png)
     }
-    @include minW1440{
+
+    @include minW1440 {
         min-height: 832px;
+    }
+    @include minW1592 {
+        background-size: cover;
     }
 
 
-    &__shadow{
+    &__shadow {
         position: absolute;
-        top:0;
+        top: 0;
         left: 0;
         width: 100%;
         height: 224px;
         background: linear-gradient(rgba(2, 2, 3, 0.72), rgba(2, 2, 3, 0) 40%);
     }
+
     &__top {
         position: relative;
         z-index: 10;
@@ -39,38 +43,30 @@
         justify-content: space-between;
         align-items: center;
         font-size: 14px;
-
-        @include minW1440{
+        padding: 0 20px;
+        border-bottom: 1px solid rgba(199, 161, 122, 0.2);
+        @include minW1440 {
             height: 89px;
-        } 
+            border: none;
+            padding: 0;
+        }
     }
 
-    &__hr{
-        position: absolute;
-        top: 49px;
-        left: 0;
-        height: 0;
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid rgba(199, 161, 122, 0.2);
+    &__leftwrap,
+    &__rightwrap {
+        
 
         @include minW1440 {
+            display: flex;
+            align-items: center;
+            height: 100%;
             width: 42%;
-            top: 89px;
+            border-bottom: 1px solid rgba(199, 161, 122, 0.2);
+            padding: 0 48px;
         }
+
     }
-    &__hrRight{
-        display: none;
-        border: none;
-        border-bottom: 1px solid rgba(199, 161, 122, 0.2);
-        @include minW1440{
-            display: block;
-            position: absolute;
-            width: 42%;
-            top: 89px;
-            right: 0;
-        }
-    }
+
     &__logo {
         position: absolute;
         left: 50%;
@@ -78,8 +74,8 @@
         letter-spacing: 1px;
         font-weight: 400;
         font-size: 13px;
-        
-        @include minW1440{
+
+        @include minW1440 {
             width: 160px;
             height: 126px;
             top: 20px;
@@ -87,46 +83,54 @@
         }
     }
 
-    &__logoText{
-        @include minW1440{
+    &__logoText {
+        @include minW1440 {
             display: none;
         }
     }
 
-    &__burgerBtn{
+    &__burgerBtn {
         margin-right: 48px;
     }
-    &__burgerSvg{
+
+    &__burgerSvg {
         width: 24px;
         height: 24px;
     }
-    &__bagBtn{
+
+    &__bagBtn {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-left: 48px;
     }
-    &__bagSvg{
+
+    &__bagSvg {
         width: 24px;
         height: 24px;
     }
-    &__bagLink{
+
+    &__bagLink {
         display: none;
-        @include minW1440{
+
+        @include minW1440 {
             display: inline-block;
             margin-left: 8px;
         }
-        
+
     }
-    &__bagNum{
+
+    &__bagNum {
         display: none;
-        @include minW1440{
+
+        @include minW1440 {
             display: flex;
             flex-direction: row;
             align-items: center;
             color: var(--color-accent);
             margin-left: 4px;
-            &::before{
+
+            &::before {
                 margin-right: 4px;
                 display: block;
                 content: ' ';
@@ -139,31 +143,35 @@
     }
 
 
-    &__navList{
-        display: none;  
+    &__navList {
+        display: none;
         flex-grow: 2;
+
         @include minW1440 {
             display: flex;
             flex-direction: row;
         }
     }
-    &__navItem{
+
+    &__navItem {
         margin-right: 32px;
     }
 
-    &__contact{
+    &__contact {
         display: none;
         flex-grow: 2;
         justify-content: end;
+
         @include minW1440 {
             display: flex;
         }
     }
-    &__order{
+
+    &__order {
         margin-left: 48px;
     }
 
-    &__banner{
+    &__banner {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -171,12 +179,14 @@
         padding-top: 18px;
         flex-grow: 3;
     }
-    &__minilogo{
-        @include minW1440{
+
+    &__minilogo {
+        @include minW1440 {
             display: none;
         }
     }
-    &__slogo{
+
+    &__slogo {
         position: absolute;
         top: 288px;
         visibility: hidden;
@@ -185,25 +195,28 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include minW1440{
+
+        @include minW1440 {
             visibility: visible;
-        }   
+        }
     }
-    &__title{
+
+    &__title {
         font-size: 72px;
         line-height: 80px;
         font-weight: 400;
         text-align: center;
     }
-    &__slogoText{
+
+    &__slogoText {
         font-size: 24px;
         line-height: 32px;
         max-width: 486px;
         text-align: center;
     }
 
-    &__button{
-        @include minW1440{
+    &__button {
+        @include minW1440 {
             display: none;
         }
     }
