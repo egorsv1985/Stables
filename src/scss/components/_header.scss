@@ -111,11 +111,11 @@
 
             &:hover {
 
-                .header__bagLink{
+                .header__bagLink {
                     color: var(--color-accent);
                 }
-                
-                
+
+
                 &.header__bagBtn:after {
                     position: absolute;
                     display: block;
@@ -261,15 +261,66 @@
         }
     }
 
+    // ----------------------меню выпадающее-------------------------------------
 
-
-    &__menu{
+    &__menu {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
+        padding: 220px 20px;
+        background-color: var(--color-accent-dark);
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 32px;
+        &--visible{
+            display: flex;
+        }
+        &--hidden{
+            display: none;
+        }
     }
 
+    &__menuListwrap {
+        width: 1216px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__menuPod{
+        flex-basis: 176px;
+        margin-bottom: 28px;
+    }
+
+    &__menuPod li {
+        list-style-position: inside;
+        
+    
+
+
+
+        &:first-child {
+            font-size: 32px;
+            line-height: 40px;
+            font-family: 'NewBaskervilleC', serif;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &__menuPod li:first-child a {
+        color: var(--color-text-light);
+    }
+
+    &__menuPod a {
+        color: var(--color-text-gray);
+    }
+
+
+
+    //---------------------------------------------------------------------------
 
 
 
@@ -286,6 +337,10 @@
         justify-content: space-between;
         padding-top: 18px;
         flex-grow: 3;
+
+        @include minW1440 {
+            padding-top: 190px;
+        }
     }
 
     &__minilogo {
@@ -295,8 +350,6 @@
     }
 
     &__slogo {
-        position: absolute;
-        top: 288px;
         visibility: hidden;
         max-width: 800px;
         height: 0;
@@ -306,14 +359,18 @@
 
         @include minW1440 {
             visibility: visible;
+            height: auto;
         }
     }
 
     &__title {
+        font-family: 'NewBaskervilleC', serif;
         font-size: 72px;
         line-height: 80px;
+        letter-spacing: 3px;
         font-weight: 400;
         text-align: center;
+        margin-bottom: 40px;
     }
 
     &__slogoText {
@@ -328,6 +385,9 @@
             display: none;
         }
     }
+
+
+
 
 
 }

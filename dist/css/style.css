@@ -385,8 +385,10 @@ template {
 
 :root {
   --color-text-light: #fff;
+  --color-text-gray: #A7A7A7;
   --color-text-dark: #000;
   --color-accent: #C7A17A;
+  --color-accent-dark: #020203;
 }
 
 @font-face {
@@ -403,6 +405,14 @@ template {
   font-style: normal;
   font-display: swap;
   src: local("Jost"), url("./../../fonts/Jost-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "NewBaskervilleC";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("NewBaskervilleC"), url("./../../fonts/NewBaskervilleCRegular.otf") format("otf");
 }
 
 * {
@@ -438,6 +448,10 @@ li {
 
 .text-accent {
   color: var(--color-accent);
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .container {
@@ -657,6 +671,63 @@ li {
   top: 0;
   left: 0;
   width: 100%;
+  padding: 220px 20px;
+  background-color: var(--color-accent-dark);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.header__menu--visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__menu--hidden {
+  display: none;
+}
+
+.header__menuListwrap {
+  width: 1216px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__menuPod {
+  -ms-flex-preferred-size: 176px;
+      flex-basis: 176px;
+  margin-bottom: 28px;
+}
+
+.header__menuPod li {
+  list-style-position: inside;
+}
+
+.header__menuPod li:first-child {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: "NewBaskervilleC", serif;
+  margin-bottom: 20px;
+}
+
+.header__menuPod li:first-child a {
+  color: var(--color-text-light);
+}
+
+.header__menuPod a {
+  color: var(--color-text-gray);
 }
 
 .header__banner {
@@ -680,8 +751,6 @@ li {
 }
 
 .header__slogo {
-  position: absolute;
-  top: 288px;
   visibility: hidden;
   max-width: 800px;
   height: 0;
@@ -698,10 +767,13 @@ li {
 }
 
 .header__title {
+  font-family: "NewBaskervilleC", serif;
   font-size: 72px;
   line-height: 80px;
+  letter-spacing: 3px;
   font-weight: 400;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .header__slogoText {
@@ -821,12 +893,17 @@ li {
     display: block;
   }
 
+  .header__banner {
+    padding-top: 190px;
+  }
+
   .header__minilogo {
     display: none;
   }
 
   .header__slogo {
     visibility: visible;
+    height: auto;
   }
 
   .header__button {

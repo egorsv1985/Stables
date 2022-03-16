@@ -1,9 +1,10 @@
 //color
 $colorTextLight: #fff;
+$colorTextGray: #A7A7A7;
 $colorTextDark: #000;
 // colortheme
 $colorAccent: #C7A17A;
-// $colorAccentDark: #1E1E1F;
+$colorAccentDark: #020203;
 // $colorAccentDarkSecond: #262626;
 // $colorAccentDarkLight: #D1D7ED;
 // $colorAccentDarkLight2: #D1D7EC;
@@ -18,9 +19,10 @@ $colorAccent: #C7A17A;
 
 :root{
     --color-text-light: #{$colorTextLight};
+    --color-text-gray: #{$colorTextGray};
     --color-text-dark: #{$colorTextDark};
     --color-accent: #{$colorAccent};
-    // --color-accent-dark: #{$colorAccentDark};
+    --color-accent-dark: #{$colorAccentDark};
     // --color-accent-dark-second: #{$colorAccentDarkSecond}; 
     // --color-accent-dark-light: #{$colorAccentDarkLight};
     // --color-accent-dark-light2: #{$colorAccentDarkLight2}; 
