@@ -1,25 +1,28 @@
 body {
-  
+ // @extend %jost-400;
+ font-family: 'Jost', sans-serif;
 }
-
-.slick-list {
- margin-bottom: 15px;
-}
-
-.slick-dots {
- display: flex;
- justify-content: center;
- font-size: 0;
- padding: 0;
- margin-bottom: 15px;
-  li {
-   width: 4px;
-   height: 4px;
-   background-color: #E0DCD7;
-   border-radius:  50%;
-   &:not(:last-child) {
-    margin-right: 20px;
-   }
-  }
-}
-
+// .slick-slider {
+//  max-width: 335px;
+//  width: 100%;
+//  margin: 0 auto 15px;
+// }
+// .slick-list {
+//  margin-bottom: 15px;
+// }
+// .slick-dots {
+//  display: flex;
+//  justify-content: center;
+//  font-size: 0;
+//  padding: 0;
+//  margin-bottom: 15px;
+//   li {
+//    width: 4px;
+//    height: 4px;
+//    background-color: #E0DCD7;
+//    border-radius:  50%;
+//    &:not(:last-child) {
+//     margin-right: 20px;
+//    }
+//   }
+// }
