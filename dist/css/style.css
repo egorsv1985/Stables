@@ -487,7 +487,7 @@ li {
   font-family: "Jost", sans-serif;
   background-color: hwb(240 1% 99%);
   position: relative;
-  background-image: url(./../../images/header/background-mob.png);
+  background-image: url(./../images/header/background-mob.png);
   background-position: 50%;
   background-repeat: no-repeat;
   min-height: 568px;
@@ -561,11 +561,11 @@ li {
 }
 
 .header__burgerBtn--burger {
-  background-image: url(./../../images/header/burgerVector.svg);
+  background-image: url(./../images/header/burgerVector.svg);
 }
 
 .header__burgerBtn--crosse {
-  background-image: url(./../../images/header/Crosse.svg);
+  background-image: url(./../images/header/Crosse.svg);
 }
 
 .header__bagBtn {
@@ -730,7 +730,6 @@ li {
 }
 
 .header__menuPodLink {
-  display: block;
   position: relative;
   color: var(--color-text-gray);
 }
@@ -741,7 +740,7 @@ li {
   left: 0;
   display: block;
   content: " ";
-  width: 100%;
+  width: 0;
   height: 1px;
   background-color: var(--color-accent);
   opacity: 1;
@@ -824,7 +823,7 @@ li {
 
 @media (min-width: 376px) {
   .header {
-    background-image: url(./../../images/header/video.png);
+    background-image: url(./../images/header/video.png);
   }
 }
 
@@ -857,7 +856,7 @@ li {
     width: 160px;
     height: 126px;
     top: 20px;
-    background: url(./../../images/header/logo-kn-21.png) no-repeat;
+    background: url(./../images/header/logo-kn-21.png) no-repeat;
   }
 
   .header__logoText {
@@ -951,14 +950,14 @@ li {
   }
 }
 
-.webp .header { background-image: url(./../../images/header/background-mob.webp); }
+.webp .header { background-image: url(./../images/header/background-mob.webp); }
 
 @media (min-width: 376px) {
 
-  .webp .header { background-image: url(./../../images/header/video.webp); }
+  .webp .header { background-image: url(./../images/header/video.webp); }
 }
 
 @media (min-width: 1440px) {
 
-  .webp .header__logo { background: url(./../../images/header/logo-kn-21.webp) no-repeat; }
+  .webp .header__logo { background: url(./../images/header/logo-kn-21.webp) no-repeat; }
 }

@@ -2,7 +2,7 @@
     font-family: 'Jost', sans-serif;
     background-color: hwb(240 1% 99%);
     position: relative;
-    background-image: url(./../../images/header/background-mob.png);
+    background-image: url(./../images/header/background-mob.png);
     background-position: 50%;
     background-repeat: no-repeat;
     min-height: 568px;
@@ -13,7 +13,7 @@
     padding-bottom: 77px;
 
     @include minW375 {
-        background-image: url(./../../images/header/video.png)
+        background-image: url(./../images/header/video.png)
     }
 
     @include minW1440 {
@@ -81,7 +81,7 @@
             width: 160px;
             height: 126px;
             top: 20px;
-            background: url(./../../images/header/logo-kn-21.png) no-repeat;
+            background: url(./../images/header/logo-kn-21.png) no-repeat;
         }
     }
 
@@ -99,10 +99,10 @@
         background-position: 50%;
 
         &--burger {
-            background-image: url(./../../images/header/burgerVector.svg);
+            background-image: url(./../images/header/burgerVector.svg);
         }
         &--crosse {
-            background-image: url(./../../images/header/Crosse.svg);
+            background-image: url(./../images/header/Crosse.svg);
         }
     }
 
@@ -277,11 +277,9 @@
         justify-content: center;
         font-size: 18px;
         line-height: 32px;
-
         &--visible {
             display: flex;
         }
-
         &--hidden {
             display: none;
         }
@@ -316,7 +314,6 @@
     }
 
     &__menuPodLink {
-        display: block;
         position: relative;
         color: var(--color-text-gray);
         &::after{
@@ -326,7 +323,7 @@
             left: 0;
             display: block;
             content: ' ';
-            width: 100%;
+            width: 0;
             height: 1px;
             background-color: var(--color-accent);
             opacity: 1;
