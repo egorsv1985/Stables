@@ -561,6 +561,11 @@ li {
   margin-left: 48px;
 }
 
+.header__bagB {
+  position: relative;
+  display: block;
+}
+
 .header__bagSvg {
   width: 24px;
   height: 24px;
@@ -582,7 +587,30 @@ li {
 }
 
 .header__navItem {
+  position: relative;
   margin-right: 32px;
+}
+
+.header__navItem::after {
+  background-color: rgba(199, 161, 122, 0);
+  -webkit-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.header__navItem:hover a {
+  color: var(--color-accent);
+}
+
+.header__navItem:hover.header__navItem:after {
+  position: absolute;
+  display: block;
+  content: " ";
+  bottom: -35px;
+  width: 100%;
+  height: 0;
+  height: 1px;
+  background-color: rgba(199, 161, 122, 0.9);
 }
 
 .header__contact {
@@ -595,8 +623,40 @@ li {
           justify-content: end;
 }
 
-.header__order {
+.header__contList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.header__contItem {
+  position: relative;
   margin-left: 48px;
+}
+
+.header__contItem:hover a {
+  color: var(--color-accent);
+}
+
+.header__contItem:hover.header__contItem:after {
+  position: absolute;
+  display: block;
+  content: " ";
+  bottom: -35px;
+  width: 100%;
+  height: 0;
+  height: 1px;
+  background-color: rgba(199, 161, 122, 0.9);
+}
+
+.header__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header__banner {
@@ -698,6 +758,25 @@ li {
     display: none;
   }
 
+  .header__bagBtn {
+    position: relative;
+  }
+
+  .header__bagBtn:hover .header__bagLink {
+    color: var(--color-accent);
+  }
+
+  .header__bagBtn:hover.header__bagBtn:after {
+    position: absolute;
+    display: block;
+    content: " ";
+    bottom: -30px;
+    width: 100%;
+    height: 0;
+    height: 1px;
+    background-color: rgba(199, 161, 122, 0.9);
+  }
+
   .header__bagLink {
     display: inline-block;
     margin-left: 8px;
@@ -739,9 +818,7 @@ li {
   }
 
   .header__contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 
   .header__minilogo {
