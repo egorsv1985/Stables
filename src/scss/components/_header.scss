@@ -93,11 +93,17 @@
 
     &__burgerBtn {
         margin-right: 48px;
-    }
-
-    &__burgerSvg {
         width: 24px;
         height: 24px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+
+        &--burger {
+            background-image: url(./../../images/header/burgerVector.svg);
+        }
+        &--crosse {
+            background-image: url(./../../images/header/Crosse.svg);
+        }
     }
 
     &__bagBtn {
@@ -137,9 +143,6 @@
         display: block;
 
     }
-
-
-
 
     &__bagSvg {
         width: 24px;
@@ -274,10 +277,12 @@
         justify-content: center;
         font-size: 18px;
         line-height: 32px;
-        &--visible{
+
+        &--visible {
             display: flex;
         }
-        &--hidden{
+
+        &--hidden {
             display: none;
         }
     }
@@ -289,15 +294,15 @@
         flex-wrap: wrap;
     }
 
-    &__menuPod{
+    &__menuPod {
         flex-basis: 176px;
         margin-bottom: 28px;
     }
 
     &__menuPod li {
         list-style-position: inside;
-        
-    
+
+
 
 
 
@@ -310,13 +315,40 @@
 
     }
 
+    &__menuPodLink {
+        display: block;
+        position: relative;
+        color: var(--color-text-gray);
+        &::after{
+            
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            content: ' ';
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-accent);
+            opacity: 1;
+            transition: all 0.2s ease-in;
+
+        }
+        &:hover {
+            color: var(--color-accent);
+
+            &.header__menuPodLink:after {
+                width: 100%;
+                left: 0;
+                opacity: 1;
+            }
+        }
+    }
+
     &__menuPod li:first-child a {
         color: var(--color-text-light);
     }
 
-    &__menuPod a {
-        color: var(--color-text-gray);
-    }
+    
 
 
 

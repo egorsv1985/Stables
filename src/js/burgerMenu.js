@@ -5,6 +5,8 @@ console.log(document.querySelector(".header__menu"))
 function openMenu(){
     burgerMenu.classList.toggle('header__menu--hidden');
     burgerMenu.classList.toggle('header__menu--visible');
+    btnBurger.classList.toggle('header__burgerBtn--burger');
+    btnBurger.classList.toggle('header__burgerBtn--crosse');
     console.log(burgerMenu)
 }
 btnBurger.onclick = openMenu;
