@@ -425,13 +425,38 @@ template {
 body {
   font-family: "Jost", sans-serif;
   color: var(--color-text-light);
-  font-size: 1rem;
-  line-height: 1.1875rem;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "NewBaskervilleC", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 2.25rem;
-  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 24px;
 }
 
 a {
@@ -455,6 +480,7 @@ li {
 }
 
 .container {
+  padding: 0 20px;
   max-width: 1240px;
   margin: auto;
 }
@@ -537,6 +563,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
+  letter-spacing: 1.1px;
   padding: 0 20px;
   border-bottom: 1px solid rgba(199, 161, 122, 0.2);
 }
@@ -579,7 +606,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 48px;
+  margin-left: 38px;
 }
 
 .header__bagB {
@@ -609,7 +636,7 @@ li {
 
 .header__navItem {
   position: relative;
-  margin-right: 32px;
+  margin-right: 20px;
 }
 
 .header__navItem::after {
@@ -655,7 +682,7 @@ li {
 
 .header__contItem {
   position: relative;
-  margin-left: 48px;
+  margin-left: 20px;
 }
 
 .header__contItem:hover a {
@@ -784,12 +811,9 @@ li {
 }
 
 .header__slogo {
-  visibility: hidden;
+  display: none;
   max-width: 800px;
   height: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -800,6 +824,7 @@ li {
 }
 
 .header__title {
+  display: none;
   font-family: "NewBaskervilleC", serif;
   font-size: 72px;
   line-height: 80px;
@@ -810,15 +835,63 @@ li {
 }
 
 .header__slogoText {
+  display: none;
   font-size: 24px;
   line-height: 32px;
   max-width: 486px;
   text-align: center;
 }
 
-.news {
-  padding-top: 109px;
-  min-height: 800px;
+.menu {
+  background-color: var(--color-accent-dark);
+  padding: 32px 0;
+}
+
+.menu__image {
+  margin: auto;
+  width: 100%;
+  margin-bottom: 28px;
+  border-radius: 16px;
+}
+
+.menu__revu {
+  margin-bottom: 31px;
+}
+
+.menu__title {
+  margin-bottom: 25px;
+}
+
+.menu__text {
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+
+.menu__watchItem {
+  border-top: 1px solid #262424;
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.menu__rev {
+  -ms-flex-preferred-size: 170px;
+      flex-basis: 170px;
+}
+
+.menu__name {
+  padding-bottom: 9px;
+}
+
+.menu__fullname {
+  line-height: 24px;
 }
 
 @media (min-width: 376px) {
@@ -830,6 +903,12 @@ li {
 @media (min-width: 1440px) {
   .header {
     min-height: 832px;
+  }
+
+  .header__shadow {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 2, 3, 0.72)), to(rgba(2, 2, 3, 0)));
+    background: -o-linear-gradient(top, rgba(2, 2, 3, 0.72) 0%, rgba(2, 2, 3, 0) 100%);
+    background: linear-gradient(180deg, rgba(2, 2, 3, 0.72) 0%, rgba(2, 2, 3, 0) 100%);
   }
 
   .header__top {
@@ -899,15 +978,15 @@ li {
         -ms-flex-align: center;
             align-items: center;
     color: var(--color-accent);
-    margin-left: 4px;
+    margin-left: 6px;
   }
 
   .header__bagNum::before {
-    margin-right: 4px;
+    margin-right: 6px;
     display: block;
     content: " ";
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     border-radius: 50%;
     background-color: var(--color-accent);
   }
@@ -935,8 +1014,18 @@ li {
   }
 
   .header__slogo {
-    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     height: auto;
+  }
+
+  .header__title {
+    display: block;
+  }
+
+  .header__slogoText {
+    display: block;
   }
 
   .header__button {
@@ -947,6 +1036,18 @@ li {
 @media (min-width: 1592px) {
   .header {
     background-size: cover;
+  }
+
+  .header__bagBtn {
+    margin-left: 48px;
+  }
+
+  .header__navItem {
+    margin-right: 32px;
+  }
+
+  .header__contItem {
+    margin-left: 48px;
   }
 }
 
