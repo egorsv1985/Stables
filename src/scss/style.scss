@@ -5,6 +5,12 @@
     width: 100%;
     box-sizing: border-box;
 }
+button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
 
 %title-text {
     font-family: 'NewBaskervilleC';
@@ -29,6 +35,15 @@
     line-height: 26px;
 }
 
+%solutionBtns-text{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7A17A;
+}
+
 .container {
     margin: 0 auto;
     max-width: 375px;
@@ -36,4 +51,6 @@
 }
 
 @import 'banquets';
+@import 'banquets-phone';
 @import 'solution';
+@import 'footer';

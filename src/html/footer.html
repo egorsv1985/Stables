@@ -1,1 +1,17 @@
-<h2>footer</h2>
+@@include('./block/title.html',{
+    "text":"Контакты"
+})
+
+
+<ul class="footer__menu">
+<li class="footer__list">
+@@include('./block/banquets-phone.html', {
+        "text-phone":"8 (8332) 43-04-85",
+        "text-contacts":"Мероприятия, банкеты, покупка сертификатов"
+        })</li>
+<li class="footer__list">
+@@include('./block/banquets-phone.html', {
+        "text-phone":"8 (8332) 64-10-86",
+        "text-contacts":"Бронирование столов"
+        })</li>
+</ul>

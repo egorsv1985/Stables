@@ -1,0 +1,18 @@
+.footer{
+    padding: 32px 20px 16px;
+    background-color: #020203;
+    &__list{
+        border-top: 1px solid #262424;
+        padding: 6px 0 16px;
+    }
+    &__list:last-child{
+        border-bottom: 1px solid #262424;
+    }
+    
+}
+.footer .banquets__title{
+    color:#fff;
+}
+.footer .banquets__hours{
+    color:#fff;
+}

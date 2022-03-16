@@ -1,0 +1,17 @@
+&__button {
+    padding: 14px 102px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(199, 161, 122, 0.55);
+    border-radius: 8px;
+    transition: 0.5s;
+    margin-top: 8px;
+    @extend %description-text;
+}
+ 
+&__button:hover{
+    transition: 0.5s;
+    background-color: #C7A17A;
+    color: #fff;
+}
+ 

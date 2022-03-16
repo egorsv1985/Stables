@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
 .banquets__title {
   font-family: "NewBaskervilleC";
   font-weight: 400;
@@ -13,7 +21,7 @@
   line-height: 40px;
 }
 
-.banquets__description {
+.solution__button, .banquets__description {
   font-family: "Jost";
   font-weight: 400;
   font-size: 16px;
@@ -55,7 +63,64 @@
   max-width: 151.5px;
   margin-right: 32px;
 }
+.banquets__contacts {
+  margin-top: 8px;
+}
+
+.banquets__link {
+  margin-top: 10px;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #C7A17A;
+}
+
+.banquets__hours {
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
 .solution {
   padding: 32px 20px 16px;
   background-color: #FAF5F0;
+}
+.solution__button {
+  padding: 14px 102px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgba(199, 161, 122, 0.55);
+  border-radius: 8px;
+  transition: 0.5s;
+  margin-top: 8px;
+}
+.solution__button:hover {
+  transition: 0.5s;
+  background-color: #C7A17A;
+  color: #fff;
+}
+
+.footer {
+  padding: 32px 20px 16px;
+  background-color: #020203;
+}
+.footer__list {
+  border-top: 1px solid #262424;
+  padding: 6px 0 16px;
+}
+.footer__list:last-child {
+  border-bottom: 1px solid #262424;
+}
+
+.footer .banquets__title {
+  color: #fff;
+}
+
+.footer .banquets__hours {
+  color: #fff;
 }
