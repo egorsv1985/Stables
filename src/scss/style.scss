@@ -24,7 +24,8 @@ body{
 
 .container{
     margin: 0 20px;
-    @media (min-width: 991px){
+    max-width: 1220px;
+    @media (min-width: 1200px){
         margin: 0 188px;
     }
 }
@@ -36,4 +37,5 @@ body{
     font-weight: 400;
 }
 @import './bonus.scss';
+@import './gallery.scss';
 
