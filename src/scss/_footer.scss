@@ -1,5 +1,5 @@
 .footer{
-    padding: 32px 20px 16px;
+    padding: 32px 20px;
     background-color: #020203;
     &__list{
         border-top: 1px solid #262424;
@@ -8,7 +8,9 @@
     &__list:last-child{
         border-bottom: 1px solid #262424;
     }
-    
+    @import 'footer-contacts';
+    @import 'footer-social';
+    @import 'footer-confidentiality';
 }
 .footer .banquets__title{
     color:#fff;

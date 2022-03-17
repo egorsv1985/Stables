@@ -2,14 +2,19 @@
     padding: 0;
     margin: 0;
     user-select: none;
-    width: 100%;
+
     box-sizing: border-box;
 }
-button{
+
+button {
     cursor: pointer;
 }
-a{
+
+a {
     text-decoration: none;
+}
+li{
+    list-style: none;
 }
 
 %title-text {
@@ -35,7 +40,17 @@ a{
     line-height: 26px;
 }
 
-%solutionBtns-text{
+%footer-social {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #C7A17A;
+}
+
+
+%solutionBtns-text {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 500;
