@@ -1,28 +1,31 @@
 body {
- // @extend %jost-400;
  font-family: 'Jost', sans-serif;
 }
-// .slick-slider {
-//  max-width: 335px;
-//  width: 100%;
-//  margin: 0 auto 15px;
-// }
-// .slick-list {
-//  margin-bottom: 15px;
-// }
-// .slick-dots {
-//  display: flex;
-//  justify-content: center;
-//  font-size: 0;
-//  padding: 0;
-//  margin-bottom: 15px;
-//   li {
-//    width: 4px;
-//    height: 4px;
-//    background-color: #E0DCD7;
-//    border-radius:  50%;
-//    &:not(:last-child) {
-//     margin-right: 20px;
-//    }
-//   }
-// }
+
+.title {
+ @extend %newbaskervillec-400;
+}
+
+.text {
+ @include text(16px, 1.6, $accentColor);
+}
+
+.link {
+ background-color: #C7A17A;
+ border: 1px solid $bgColor;
+ border-radius: 8px;
+ width: 100%;
+ padding: 14px 0;
+ display: block;
+ text-align: center;
+ transition: all 0.5s;
+  &:hover {
+   background-color: $bgColor;
+   color:#C7A17A;
+   border: 1px solid #C7A17A;
+  }
+  @include media (sm) {
+   padding: 14px 20px;
+   display: inline;
+  }
+}
