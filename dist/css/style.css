@@ -1113,6 +1113,10 @@ li {
     display: none;
   }
 
+  .menu {
+    padding: 80px 0;
+  }
+
   .menu__wrap {
     -webkit-column-gap: 64px;
        -moz-column-gap: 64px;
