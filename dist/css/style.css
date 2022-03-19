@@ -387,8 +387,11 @@ template {
   --color-text-light: #fff;
   --color-text-gray: #A7A7A7;
   --color-text-dark: #000;
+  --color-text-accent: #C7A17A;
   --color-accent: #C7A17A;
   --color-accent-dark: #020203;
+  --color-bg-dark: #13131A;
+  --color-decor: #262424;
 }
 
 @font-face {
@@ -426,7 +429,6 @@ body {
   font-family: "Jost", sans-serif;
   color: var(--color-text-light);
   font-size: 16px;
-  line-height: 19px;
 }
 
 h1,
@@ -912,6 +914,97 @@ li {
   color: var(--color-text-gray);
 }
 
+.bonus {
+  background-color: var(--color-bg-dark);
+  padding: 32px 0;
+}
+
+.bonus__image {
+  background-image: url(./../../images/bonus/phone.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  min-height: 224px;
+  width: 100%;
+}
+
+.bonus__image,
+.bonus__text {
+  margin-bottom: 32px;
+}
+
+.bonus__title {
+  margin-bottom: 40px;
+}
+
+.bonus__list,
+.bonus__text {
+  color: var(--color-text-gray);
+}
+
+.bonus__list {
+  margin-bottom: 10px;
+}
+
+.bonus__item {
+  font-size: 15px;
+  line-height: 24px;
+  padding: 8px 0 24px;
+  border-top: 1px solid var(--color-decor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.bonus__pocent {
+  font-size: 40px;
+  line-height: 48px;
+  color: var(--color-text-accent);
+  margin: 0 32px;
+}
+
+.bonus__text {
+  line-height: 26px;
+}
+
+.bonus__btnWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bonus__btn {
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 375px;
+  background-repeat: no-repeat;
+  text-align: left;
+  padding-left: 84px;
+}
+
+.bonus__btn--app {
+  background-image: url(./../../images/bonus/app_store.svg.png);
+  background-position: 15% 48%;
+}
+
+.bonus__btn--google {
+  background-image: url(./../../images/bonus/google_play.svg.png);
+  background-position: 15% 50%;
+}
+
 @media (min-width: 376px) {
   .header {
     background-image: url(./../images/header/video.png);
@@ -955,6 +1048,20 @@ li {
     position: absolute;
     left: 40%;
     top: 0;
+  }
+
+  .bonus__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .bonus__image {
+    background-image: url(./../../images/bonus/phonebig.png);
   }
 }
 
@@ -1122,6 +1229,10 @@ li {
        -moz-column-gap: 64px;
             column-gap: 64px;
   }
+
+  .menu__title {
+    font-size: 48px;
+  }
 }
 
 @media (min-width: 1592px) {
@@ -1146,6 +1257,12 @@ li {
 
 .webp .menu__image { background: url(./../images/menu/img.webp); }
 
+.webp .bonus__image { background-image: url(./../../images/bonus/phone.webp); }
+
+.webp .bonus__btn--app { background-image: url(./../../images/bonus/app_store.svg.webp); }
+
+.webp .bonus__btn--google { background-image: url(./../../images/bonus/google_play.svg.webp); }
+
 @media (min-width: 376px) {
 
   .webp .header { background-image: url(./../images/header/video.webp); }
@@ -1154,6 +1271,11 @@ li {
 @media (min-width: 376px) {
 
   .webp .menu__image { background: url(./../images/menu/imgmenu.webp); }
+}
+
+@media (min-width: 768px) {
+
+  .webp .bonus__image { background-image: url(./../../images/bonus/phonebig.webp); }
 }
 
 @media (min-width: 1440px) {

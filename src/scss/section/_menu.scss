@@ -71,6 +71,9 @@
 
     &__title {
         margin-bottom: 25px;
+        @include minW1440{
+            font-size: 48px;
+        }
     }
 
     &__text {
