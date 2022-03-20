@@ -2,19 +2,27 @@
     font-family: 'Jost', sans-serif;
     background-color: hwb(240 1% 99%);
     position: relative;
-    background-image: url(./../images/header/background-mob.png);
-    background-position: 50%;
-    background-repeat: no-repeat;
-    min-height: 568px;
+
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 77px;
 
-    @include minW375 {
-        background-image: url(./../images/header/video.png)
+    &--big {
+        min-height: 568px;
+        background-image: url(./../images/header/background-mob.png);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        @include minW375 {
+            background-image: url(./../images/header/video.png)
+        }
     }
+
+    
+
+    
 
     @include minW1440 {
         min-height: 832px;
@@ -32,12 +40,14 @@
         width: 100%;
         height: 224px;
         background: linear-gradient(rgba(2, 2, 3, 0.72), rgba(2, 2, 3, 0) 40%);
+
         @include minW1440 {
             background: linear-gradient(180deg, rgba(2, 2, 3, 0.72) 0%, rgba(2, 2, 3, 0) 100%);
         }
     }
 
     &__top {
+        font-weight: 500;
         position: relative;
         z-index: 10;
         width: 100%;
@@ -56,11 +66,19 @@
             border: none;
             padding: 0;
         }
+
+        &--min{
+            background-color: var(--color-bg-light-accent);
+            margin-bottom: 16px;
+            @include minW1440{
+                background-color: #fff;
+                
+            }
+        }
     }
 
     &__leftwrap,
     &__rightwrap {
-
 
         @include minW1440 {
             display: flex;
@@ -68,11 +86,20 @@
             height: 100%;
             width: 42%;
             border-bottom: 1px solid rgba(199, 161, 122, 0.2);
-            padding: 0 48px;
         }
 
     }
 
+    &__leftwrap{
+        @include minW1440{
+            padding: 0 0 0 48px;
+        }
+    }
+    &__rightwrap{
+        @include minW1440{
+            padding: 0 48px 0 0;
+        }
+    }
     &__logo {
         position: absolute;
         left: 50%;
@@ -90,9 +117,17 @@
     }
 
     &__logoText {
+        font-weight: 500;
+        &--big{
+            color: var(--color-text-light);
+        }
+        &--min{
+            color: var(--color-text-dark);
+        }
         @include minW1440 {
             display: none;
         }
+        
     }
 
     &__burgerBtn {
@@ -105,6 +140,7 @@
         &--burger {
             background-image: url(./../images/header/burgerVector.svg);
         }
+
         &--crosse {
             background-image: url(./../images/header/Crosse.svg);
         }
@@ -115,9 +151,12 @@
         flex-direction: row;
         align-items: center;
         margin-left: 38px;
-        
 
-        @include minW1592{margin-left: 48px;}
+
+        @include minW1592 {
+            margin-left: 48px;
+        }
+
         @include minW1440 {
             position: relative;
 
@@ -132,7 +171,7 @@
                     position: absolute;
                     display: block;
                     content: ' ';
-                    bottom: -30px;
+                    bottom: -31px;
                     width: 100%;
                     height: 0;
                     height: 1px;
@@ -157,6 +196,9 @@
 
     &__bagLink {
         display: none;
+        &--min{
+            color: var(--color-text-dark);
+        }
         @include minW1440 {
             display: inline-block;
             margin-left: 8px;
@@ -195,13 +237,20 @@
             display: flex;
             flex-direction: row;
         }
+        &--min a{
+            color: var(--color-text-dark);
+        }
     }
 
     &__navItem {
         position: relative;
-        
+
         margin-right: 20px;
-        @include minW1592{margin-right: 32px;}
+
+        @include minW1592 {
+            margin-right: 32px;
+        }
+
         &::after {
             background-color: rgba(199, 161, 122, 0);
             transition: all 0.4s ease-in;
@@ -216,7 +265,7 @@
                 position: absolute;
                 display: block;
                 content: ' ';
-                bottom: -35px;
+                bottom: -37px;
                 width: 100%;
                 height: 0;
                 height: 1px;
@@ -245,13 +294,19 @@
     &__contList {
         display: flex;
         justify-content: end;
+        &--min a{
+            color: var(--color-text-dark);
+        }
     }
 
     &__contItem {
         position: relative;
         margin-left: 20px;
 
-        @include minW1592{margin-left: 48px;}
+        @include minW1592 {
+            margin-left: 48px;
+        }
+
         &:hover {
             a {
                 color: var(--color-accent);
@@ -261,7 +316,7 @@
                 position: absolute;
                 display: block;
                 content: ' ';
-                bottom: -35px;
+                bottom: -37px;
                 width: 100%;
                 height: 0;
                 height: 1px;
@@ -284,9 +339,11 @@
         justify-content: center;
         font-size: 18px;
         line-height: 32px;
+
         &--visible {
             display: flex;
         }
+
         &--hidden {
             display: none;
         }
@@ -323,8 +380,9 @@
     &__menuPodLink {
         position: relative;
         color: var(--color-text-gray);
-        &::after{
-            
+
+        &::after {
+
             position: absolute;
             bottom: 0;
             left: 0;
@@ -337,6 +395,7 @@
             transition: all 0.2s ease-in;
 
         }
+
         &:hover {
             color: var(--color-accent);
 
@@ -352,7 +411,7 @@
         color: var(--color-text-light);
     }
 
-    
+
 
 
 
@@ -407,6 +466,7 @@
         font-weight: 400;
         text-align: center;
         margin-bottom: 40px;
+
         @include minW1440 {
             display: block;
         }
@@ -418,6 +478,7 @@
         line-height: 32px;
         max-width: 486px;
         text-align: center;
+
         @include minW1440 {
             display: block;
         }
