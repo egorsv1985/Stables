@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Jost";
+    src: url("../fonts/Jost-400-Book.woff2") format('woff2'), url("../fonts/Jost-400-Book.eot") format('eot'), url("../fonts/Jost-400-Book.svg") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Jost";
+    src: url("../fonts/Jost-500-Medium.woff2") format('woff2'), url("../fonts/Jost-500-Medium.eot") format('eot'), url("../fonts/Jost-500-Medium.svg") format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "NewBaskervilleC";
+    src: url("../fonts/NewBaskervilleStd-Roman.woff2") format('woff2'), url("../fonts/NewBaskervilleStd-Roman.eot") format('eot'), url("../fonts/NewBaskervilleStd-Roman.svg") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+%title-text {
+    font-family: 'NewBaskervilleC';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+%description-text {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #503D3B;
+}
+
+%price-text {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+%footer-social {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #C7A17A;
+}
+
+
+%solutionBtns-text {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7A17A;
+}
+
+// size 375px start
+.container {
+    margin: 0 auto;
+    max-width: 375px;
+
+}
+
+@import 'banquets';
+@import 'banquets-phone';
+@import 'solution';
+@import 'form';
+@import 'footer';
+
+// end size 385px
+
+@media (min-width: 425px) {
+
+    .container {
+        max-width: 425px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+@media (min-width: 1592px) {
+    .container {
+        max-width: 1592px;
+    }
+}
+
+
+.icon {
+    fill: #C7A17A;
+    height: 24px;
+    max-width: 24px;
+}
+
+.date,
+.cirlce {
+    max-width: 22px;
+    max-height: 22px;
+    margin-right: 11px;
+}

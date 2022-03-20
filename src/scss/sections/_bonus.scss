@@ -1,0 +1,90 @@
+.bonus{
+    background-color: var(--color-bg-dark);
+    padding: 32px 0;
+    
+    &__wrap{
+        @include minW768{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__image{
+        background-image: url(./../../images/bonus/phone.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+        min-height: 224px;
+        width: 100%;
+        @include minW768{
+            background-image: url(./../../images/bonus/phonebig.png);
+        }
+    }
+    &__image,
+    &__text{
+        margin-bottom: 32px;
+    }
+
+    &__content{
+        
+    }
+
+    &__title{
+        margin-bottom: 40px;
+    }
+
+    &__list,
+    &__text{
+        color: var(--color-text-gray);
+    }
+
+    &__list{
+        margin-bottom: 10px;
+        
+    }
+
+    &__item{
+        font-size: 15px;
+        line-height: 24px;
+        padding: 8px 0 24px;
+        border-top: 1px solid var(--color-decor);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &__pocent{
+        font-size: 40px;
+        line-height: 48px;
+        color: var(--color-text-accent);
+        margin: 0 32px;
+    }
+
+    &__text{
+        line-height: 26px;
+    }
+
+    &__btnWrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__btn{
+        margin-bottom: 16px;
+        width: 100%;
+        max-width: 375px;
+        background-repeat: no-repeat;
+        text-align: left;
+        padding-left: 84px;
+        &--app{
+            background-image: url(./../../images/bonus/app_store.svg.png);
+            background-position: 15% 48%;;
+        }
+        &--google{
+            background-image: url(./../../images/bonus/google_play.svg.png);
+            background-position: 15% 50%;
+        }
+
+    }
+
+}

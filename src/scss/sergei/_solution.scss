@@ -1,0 +1,81 @@
+.solution {
+    padding: 27px 20px 12px;
+    background-color: #FAF5F0;
+    @import 'solution-btns';
+
+    .banquets__description {
+        max-width: 335px;
+    }
+}
+
+@media (min-width:425px) {
+    .solution {
+        .banquets__description {
+            max-width: 425px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .solution {
+        .banquets__description {
+            max-width: 100%;
+        }
+
+        .banquets__contacts {
+            text-align: center;
+        }
+
+        &__buttonsApp {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (min-width: 1592px) {
+    .solution {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 80px 188px 69px;
+ 
+        &__info {
+            margin-right: 33px;
+        }
+
+        .banquets__description {
+            flex-direction: column;
+            max-width: 647px;
+        }
+
+        .banquets__contacts {
+            text-align: left;
+            margin-right: 55px;
+         }
+
+        .banquets__description:first-child {
+            display: none;
+        }
+
+        .descriptionBlock {
+            display: none;
+        }
+
+        .descriptionSecond {
+            margin-bottom: 15px;
+        }
+
+        .banquets__title {
+            font-size: 53px;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        &__buttonsApp {
+            display: flex;
+            flex-direction: row;
+            margin-top: -10px;
+        }
+    }
+
+}

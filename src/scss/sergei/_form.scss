@@ -1,0 +1,171 @@
+.form {
+
+	padding: 0 188px;
+	display: none;
+	justify-content: center;
+
+	form {
+
+		max-width: 480px;
+	}
+
+	&__title {
+		@extend %title-text;
+		margin-bottom: 34px;
+		font-size: 45px;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		background: #FAF5F0;
+		border-radius: 8px;
+		margin-bottom: 26px;
+	}
+
+	&__place {
+		background: inherit;
+		border: none;
+		@extend %footer-social;
+		padding: 13px 73px;
+		border-radius: 8px;
+	}
+
+	&__place:first-child {
+		background: #C7A17A;
+		color: #FFFFFF;
+	}
+
+	&__date {
+		position: relative;
+		border: 1px solid #E2DFDD;
+		padding: 9px 13px;
+		border-radius: 8px 0 0 8px;
+		display: flex;
+		align-items: center;
+		width: 240px;
+	}
+
+	&__person {
+		display: flex;
+		align-items: center;
+		width: 240px;
+	}
+
+	&__date::after,
+	&__person::after {
+		position: absolute;
+		content: "";
+		width: 6px;
+		height: 6px;
+		display: inline-block;
+		top: 36%;
+		right: 14px;
+		border-bottom: 1px solid #000;
+		border-right: 1px solid #000;
+		transform: rotate(45deg);
+	}
+
+	&__person {
+		position: relative;
+		border: 1px solid #E2DFDD;
+		border-left: none;
+		padding: 10px 13px;
+		border-radius: 0 8px 8px 0;
+	}
+
+	&__dateInfo {
+		display: flex;
+		margin-bottom: 24px;
+	}
+
+	&__info {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 24px;
+
+		label {
+			display: inline-block;
+			@extend %description-text;
+			line-height: 44px;
+			width: 75px;
+			margin-right: 16px;
+		}
+
+		input {
+			width: 384px;
+			height: 44px;
+			outline: none;
+			border: 1px solid #E2DFDD;
+		}
+
+
+
+	}
+
+	&__events {
+		display: flex;
+		flex-direction: column;
+
+		label {
+			@extend %description-text;
+			display: block;
+		}
+
+		input {
+			border: 1px solid #E2DFDD;
+			border-radius: 8px;
+			width: 480px;
+			height: 68px;
+		}
+	}
+
+	&__description {
+		display: block;
+		@extend %description-text;
+		color: #A7A7A7;
+		line-height: 20px;
+		margin-top: 6px;
+	}
+
+
+	&__buttonSabmit {
+		border: none;
+		width: 100%;
+		background-color: #C7A17A;
+		padding: 22px 0;
+		@extend %solutionBtns-text;
+		font-size: 20px;
+		color: #FFFFFF;
+		border-radius: 8px;
+		cursor: pointer;
+		margin-top: 31px;
+	}
+}
+
+.text-form {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom: none;
+	position: absolute;
+	top: 1.5px;
+	right: 1px;
+}
+
+.phone-form {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top: none;
+	position: absolute;
+	bottom: 1.5px;
+	right: 1px;
+}
+
+@media (min-width: 1592px) {
+	.form {
+		display: flex;
+		padding-top: 82px;
+
+	}
+}
