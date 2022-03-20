@@ -483,7 +483,7 @@ li {
 
 .container {
   padding: 0 20px;
-  max-width: 1240px;
+  max-width: 1256px;
   margin: auto;
 }
 
@@ -915,6 +915,7 @@ li {
 }
 
 .bonus {
+  position: relative;
   background-color: var(--color-bg-dark);
   padding: 32px 0;
 }
@@ -931,6 +932,11 @@ li {
 .bonus__image,
 .bonus__text {
   margin-bottom: 32px;
+}
+
+.bonus__content {
+  margin: auto;
+  max-width: 592px;
 }
 
 .bonus__title {
@@ -989,7 +995,7 @@ li {
 .bonus__btn {
   margin-bottom: 16px;
   width: 100%;
-  max-width: 375px;
+  max-width: 335px;
   background-repeat: no-repeat;
   text-align: left;
   padding-left: 84px;
@@ -1014,6 +1020,10 @@ li {
     background: url(./../images/menu/imgmenu.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 50% 70%;
+  }
+
+  .bonus__image {
     background-position: 50% 70%;
   }
 }
@@ -1050,18 +1060,8 @@ li {
     top: 0;
   }
 
-  .bonus__wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-
   .bonus__image {
-    background-image: url(./../../images/bonus/phonebig.png);
+    background-size: 50%;
   }
 }
 
@@ -1085,6 +1085,48 @@ li {
 
   .menu__fullname {
     max-width: 214px;
+  }
+
+  .bonus__image {
+    background-image: url(./../../images/bonus/phonebig.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    background-size: 660px;
+  }
+
+  .bonus__image,
+  .bonus__text {
+    margin-bottom: 30px;
+  }
+
+  .bonus__content {
+    position: relative;
+    margin: 0;
+  }
+
+  .bonus__btnWrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .bonus__btn {
+    width: auto;
+    padding-left: 45px;
+    padding-bottom: 10px;
+    margin-right: 16px;
+  }
+
+  .bonus__btn--app {
+    background-position: 18px 48%;
+  }
+
+  .bonus__btn--google {
+    background-position: 18px 50%;
   }
 }
 
@@ -1233,6 +1275,31 @@ li {
   .menu__title {
     font-size: 48px;
   }
+
+  .bonus {
+    padding: 78px 0 80px;
+  }
+
+  .bonus__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    background-size: 776px;
+    background-position: 64% -1%;
+  }
+
+  .bonus__title {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 42px;
+  }
+
+  .bonus__pocent {
+    margin: 0 34px;
+  }
 }
 
 @media (min-width: 1592px) {
@@ -1273,7 +1340,7 @@ li {
   .webp .menu__image { background: url(./../images/menu/imgmenu.webp); }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
   .webp .bonus__image { background-image: url(./../../images/bonus/phonebig.webp); }
 }
