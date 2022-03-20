@@ -1,0 +1,161 @@
+&__date {
+ margin: 16px 0;
+ position: relative;
+ display: flex;
+ align-items: center
+}
+
+&__description {
+ max-width: 290px;
+}
+
+&__item {
+ padding-bottom: 30px;
+
+}
+
+.topMenu {
+ border-bottom: 1px solid #E5D9D8;
+}
+
+&__item:last-child {
+ border-bottom: none;
+}
+
+&__day {
+
+ @extend %description-text;
+ font-size: 40px;
+ line-height: 48px;
+}
+
+&__date::after {
+ position: absolute;
+ content: "";
+ background: #E5D9D8;
+ width: 1px;
+ height: 100%;
+ display: inline-block;
+ left: 48px;
+}
+
+&__dateBlock {
+ margin-left: 21px;
+ display: flex;
+ flex-direction: column;
+}
+
+&__mounth {
+ @extend %description-text;
+ line-height: 24px;
+}
+
+&__fullhday {
+ @extend %description-text;
+ line-height: 24px;
+ color: #C7A17A;
+}
+
+&__img {
+ margin-bottom: 16px;
+}
+
+&__titleDesc {
+ @extend %description-text;
+ color: #010103;
+ font-size: 24px;
+ line-height: 32px;
+ display: block;
+ margin-bottom: 16px;
+ max-width: 290px;
+}
+
+&__desc {
+ @extend %description-text;
+ max-width: 290px;
+}
+
+&__btn {
+ margin-top: 16px;
+ display: flex;
+}
+
+&__textBtn {
+ display: flex;
+ flex-direction: column;
+ margin-right: 37px;
+}
+
+&__time {
+ @extend %description-text;
+ line-height: 24px;
+ font-weight: 500;
+}
+
+&__place {
+ @extend %description-text;
+ line-height: 24px;
+ color: #C7A17A;
+}
+
+&__button {
+ @extend %description-text;
+ line-height: 20px;
+ color: #ffff;
+ background: #C7A17A;
+ border-radius: 8px;
+ padding: 14px 31px;
+ border: none;
+}
+
+&__stockBlock {
+ margin-left: 21px;
+ display: flex;
+ flex-direction: column;
+ margin: 16px 0;
+
+ span {
+  font-size: 24px;
+  line-height: 32px;
+ }
+
+
+}
+
+&__stockText {
+ display: flex;
+ flex-direction: column;
+ margin-right: 32px;
+ margin-top: 16px;
+}
+
+&__stockDesc {
+ max-width: 280px;
+}
+
+.stockEvent {
+ img {
+  margin-bottom: 10px;
+ }
+}
+.stockBlock{
+ display: flex;
+ flex-direction: column;
+}
+@media (min-width: 1592px) {
+ &__stockText {
+  margin-right: 8px;
+  display: flex;
+
+ }
+.second{
+ margin-left: 50px;
+}
+ .stockTime {
+  margin-right: 50px;
+ }
+ .stockPlace {
+  max-width: 180px;
+ }
+
+}
