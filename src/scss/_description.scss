@@ -1,4 +1,28 @@
 &__description {
     max-width: 315px;
+    margin-bottom: 16px;
     @extend %description-text;
+}
+&__description:last-child{
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+@media (min-width:425px) {
+    &__description {
+        max-width: 425px;
+    }
+    
+}
+@media (min-width:768px) {
+    &__description {
+        max-width: 768px;
+    }
+    
+}
+
+@media (min-width:1592px) {
+    &__description {
+        margin-bottom: 33px;
+    }
+    
 }

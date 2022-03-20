@@ -1,17 +1,57 @@
 &__button {
-    padding: 14px 102px;
     background-color: transparent;
     outline: none;
     border: 1px solid rgba(199, 161, 122, 0.55);
     border-radius: 8px;
     transition: 0.5s;
-    margin-top: 8px;
+    padding: 10px 104px;
+    margin-bottom: 8px;
     @extend %description-text;
+    color: #C7A17A;
 }
- 
-&__button:hover{
+
+&__button:hover {
     transition: 0.5s;
     background-color: #C7A17A;
     color: #fff;
 }
- 
+
+.application {
+    color: #FFFFFF;
+    background-color: #C7A17A;
+    margin: 15px 0 20px;
+}
+
+
+@media (min-width:425px) {
+    &__button {
+        width: 100%;
+    }
+}
+
+@media (min-width:1592px) {
+    &__buttons {
+        display: flex;
+        padding: 12px 65px;
+        
+
+    }
+    .banquets__contacts{
+        text-align: left;
+    }
+
+    &__button {
+        padding: 10px 23px;
+        width: auto;
+        margin-top: -7px;
+        margin-right: 10px;
+    }
+
+    .application {
+        color: #FFFFFF;
+        background-color: #C7A17A;
+        margin: 9px  0 19px;
+        padding: 12px 20px;
+        height: 48px;
+    }
+}
