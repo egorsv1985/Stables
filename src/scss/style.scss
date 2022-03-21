@@ -14,16 +14,18 @@
 
 
 
-// components
+// sections
 
-
+@import "./sections/main";
+@import "./sections/menu";
 
 
 // block
 @import "./blocks/header";
 
-@import "./blocks/main";
-@import "./blocks/_drop-down";
+@import "./blocks/drop-down";
+@import "./blocks/menu-item";
+
 
 
 
