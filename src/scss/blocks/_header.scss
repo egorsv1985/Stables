@@ -1,41 +1,5 @@
 .header {
-    font-family: 'Jost', sans-serif;
-    background-color: hwb(240 1% 99%);
-    position: relative;
-    background-image: url(./../images/header/background-mob.png);
-    background-position: 50%;
-    background-repeat: no-repeat;
-    min-height: 568px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 77px;
 
-    @include minW375 {
-        background-image: url(./../images/header/video.png)
-    }
-
-    @include minW1440 {
-        min-height: 832px;
-    }
-
-    @include minW1592 {
-        background-size: cover;
-    }
-
-
-    &__shadow {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 224px;
-        background: linear-gradient(rgba(2, 2, 3, 0.72), rgba(2, 2, 3, 0) 40%);
-        @include minW1440 {
-            background: linear-gradient(180deg, rgba(2, 2, 3, 0.72) 0%, rgba(2, 2, 3, 0) 100%);
-        }
-    }
 
     &__top {
         position: relative;
@@ -73,21 +37,7 @@
 
     }
 
-    &__logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        letter-spacing: 1px;
-        font-weight: 400;
-        font-size: 13px;
 
-        @include minW1440 {
-            width: 160px;
-            height: 126px;
-            top: 20px;
-            background: url(./../images/header/logo-kn-21.png) no-repeat;
-        }
-    }
 
     &__logoText {
         @include minW1440 {
@@ -95,16 +45,17 @@
         }
     }
 
-    &__burgerBtn {
+    &__burger {
         margin-right: 48px;
         width: 24px;
         height: 24px;
         background-repeat: no-repeat;
         background-position: 50%;
 
-        &--burger {
+        &--open {
             background-image: url(./../images/header/burgerVector.svg);
         }
+
         &--crosse {
             background-image: url(./../images/header/Crosse.svg);
         }
@@ -115,9 +66,12 @@
         flex-direction: row;
         align-items: center;
         margin-left: 38px;
-        
 
-        @include minW1592{margin-left: 48px;}
+
+        @include minW1592 {
+            margin-left: 48px;
+        }
+
         @include minW1440 {
             position: relative;
 
@@ -157,6 +111,7 @@
 
     &__bagLink {
         display: none;
+
         @include minW1440 {
             display: inline-block;
             margin-left: 8px;
@@ -199,9 +154,13 @@
 
     &__navItem {
         position: relative;
-        
+
         margin-right: 20px;
-        @include minW1592{margin-right: 32px;}
+
+        @include minW1592 {
+            margin-right: 32px;
+        }
+
         &::after {
             background-color: rgba(199, 161, 122, 0);
             transition: all 0.4s ease-in;
@@ -251,7 +210,10 @@
         position: relative;
         margin-left: 20px;
 
-        @include minW1592{margin-left: 48px;}
+        @include minW1592 {
+            margin-left: 48px;
+        }
+
         &:hover {
             a {
                 color: var(--color-accent);
@@ -284,9 +246,11 @@
         justify-content: center;
         font-size: 18px;
         line-height: 32px;
+
         &--visible {
             display: flex;
         }
+
         &--hidden {
             display: none;
         }
@@ -323,8 +287,9 @@
     &__menuPodLink {
         position: relative;
         color: var(--color-text-gray);
-        &::after{
-            
+
+        &::after {
+
             position: absolute;
             bottom: 0;
             left: 0;
@@ -337,6 +302,7 @@
             transition: all 0.2s ease-in;
 
         }
+
         &:hover {
             color: var(--color-accent);
 
@@ -352,85 +318,320 @@
         color: var(--color-text-light);
     }
 
-    
+}
+
+.header {
+    position: sticky;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+
+    font-family: 'Jost';
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+
+    color: $textColor;
+
+    &:hover {
+        color: $textColorActive;
+    }
 
 
 
-    //---------------------------------------------------------------------------
+    @media (min-width:1000px) {
+        .container {
+            padding: 0 48px;
+            max-width: 100%;
+        }
+    }
 
 
 
-
-
-
-
-
-
-    &__banner {
+    // .header__inner
+    &__inner {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
-        padding-top: 18px;
-        flex-grow: 3;
+        align-items: center;
+    }
 
-        @include minW1440 {
-            padding-top: 190px;
+
+    // .header__wrapper
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+
+    }
+
+    // .header__block
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+
+        @media (min-width:1000px) {
+            margin-right: 270px;
         }
     }
 
-    &__minilogo {
-        @include minW1440 {
+    // .header__nav
+    &__nav {
+        display: none;
+
+        @media (min-width:1000px) {
+            display: flex;
+
+        }
+    }
+
+    // .header__list
+    &__list {}
+
+    // .header__item
+    &__item {}
+
+    // .header__link
+    &__link {}
+
+    // .header__order
+    &__order {
+        @media (min-width:1000px) {
             display: none;
         }
     }
 
-    &__slogo {
-        display: none;
-        max-width: 800px;
-        height: 0;
-        flex-direction: column;
+    // .header__contacts
+    &__contacts {}
+
+    // .header__basket
+    &__basket {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
 
-        @include minW1440 {
+        @media (min-width:1000px) {
+            gap: 8px;
+        }
+
+    }
+
+    // .header__basket-link
+    &__basket-link {}
+
+    // .header__basket-img
+    &__basket-img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+
+    // .header__basket-name
+    &__basket-name {
+        display: none;
+
+        @media (min-width:1000px) {
             display: flex;
-            height: auto;
+            justify-content: center;
+            align-items: center;
         }
     }
 
-    &__title {
+
+
+    // .header__counter
+    &__counter {
         display: none;
-        font-family: 'NewBaskervilleC', serif;
-        font-size: 72px;
-        line-height: 80px;
-        letter-spacing: 3px;
-        font-weight: 400;
-        text-align: center;
-        margin-bottom: 40px;
-        @include minW1440 {
-            display: block;
+
+        @media (min-width:1000px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
-    &__slogoText {
-        display: none;
-        font-size: 24px;
-        line-height: 32px;
-        max-width: 486px;
-        text-align: center;
-        @include minW1440 {
-            display: block;
+    // .header__logo
+    &__logo {
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-img {
+            @include background (url("./../img/header/logo-mob.svg"));
+            width: 163px;
+            height: 32px;
+
+            @media (min-width:1000px) {
+                @include background (url("./../img/header/logo.svg"));
+                width: 160px;
+                height: 125px;
+                position: relative;
+                top: -20px;
+            }
         }
     }
-
-    &__button {
-        @include minW1440 {
-            display: none;
-        }
-    }
-
-
 
 
 
 }
+
+
+.nav {
+
+    // .nav__list
+    &__list {
+
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        @media (max-width:768px) {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #170337;
+            flex-direction: column;
+            justify-content: center;
+            transition: left 0.3s ease 0s;
+            z-index: 10;
+
+            .menu-open & {
+                left: 0;
+            }
+
+        }
+    }
+
+    // .nav__item
+    &__item {
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    // .nav__link
+    &__link {
+
+
+        transition: color 0.3s ease 0s;
+
+
+        &:hover {
+            color: $textColorActive;
+        }
+    }
+}
+
+
+
+
+
+.contacts {
+    display: none;
+
+    @media (min-width:1000px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .contacts__list
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 48px;
+    }
+
+    // .contacts__item
+    &__item {}
+
+    // .contacts__tel
+    &__tel {}
+
+    // .contacts__reserve
+    &__reserve {}
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+    width: 24px;
+    height: 24px;
+    padding: 6px 2px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 15;
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        span,
+        &::before,
+        &::after {
+            content: "";
+            transition: all 0.3s ease 0s;
+            left: 0px;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #C7A17A;
+            border-radius: 1px;
+        }
+
+        &::before {
+            top: 0px;
+        }
+
+        &::after {
+            bottom: 0px;
+        }
+
+        span {
+            top: calc(50% - 1px);
+        }
+
+        .nav-open & {
+            span {
+                transform: scale(0);
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+                top: calc(50% - 1px);
+            }
+
+            &::after {
+                transform: rotate(45deg);
+                bottom: calc(50% - 1px);
+            }
+        }
+    }
+}
+
+
+
+.scrolled {}

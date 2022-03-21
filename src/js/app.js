@@ -1,7 +1,9 @@
 import * as flsFunctions from "./modules/functions.js";
+
 // import * as flsFunctions from "./modules/delay.js";
 
 flsFunctions.isWebp();
+
 
 
 // core version + navigation, pagination modules:
@@ -12,6 +14,110 @@ import Swiper, {
 
 // init Swiper:
 const swiper = new Swiper();
+
+
+$(function() {
+    $('.event-slider').slick ({
+     dots: true,
+     arrows: false,
+     infinite: true,
+     slidesToShow: 1,
+     slidesToScroll: 1,
+     responsive: [
+      {
+      breakpoint: 1600,
+      settings: "unslick"
+      },
+      {
+        breakpoint: 768,
+        setting:{
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+      }
+      }
+      ]
+    });
+  });
+
+
+
+
+  $(document).ready(function () {
+
+    $('.gallery__slider').slick({
+        // infinite: true,
+        // slidesToShow: 1,
+        // slidesToScroll: 1,
+        // centerMode: true,
+        //               centerPadding: '0px',
+        dots: true
+    });
+
+
+    $('.gallery__slider-item').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		// image: {
+		// 	verticalFit: true,
+		// 	titleSrc: function(item) {
+		// 		return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+		// 	}
+		// },
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+
+}); 
+// Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
+export function menuInit() {
+	let iconMenu = document.querySelector(".icon-menu");
+	if (iconMenu) {
+		iconMenu.addEventListener("click", function (e) {
+			if (bodyLockStatus) {
+				bodyLockToggle();
+				document.documentElement.classList.toggle("menu-open");
+			}
+		});
+	};
+}
+export function menuOpen() {
+	bodyLock();
+	document.documentElement.classList.add("menu-open");
+}
+export function menuClose() {
+	bodyUnlock();
+	document.documentElement.classList.remove("menu-open");
+}
+
+menuInit();
+
+export function headerScrolled() {
+	window.addEventListener('scroll', function() {
+		const header = document.querySelector('.header')
+		if (window.pageYOffset >= 150) {
+				 
+				  header.classList.add("scrolled");
+			} else {
+					  
+					  header.classList.remove("scrolled");
+					}
+	  });
+}
+headerScrolled();
+
 
 // Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
 export let bodyLockStatus = true;
@@ -57,102 +163,3 @@ export let bodyLock = (delay = 500) => {
 		}, delay);
 	}
 }
-
-// Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
-export function menuInit() {
-	let iconMenu = document.querySelector(".icon-menu");
-	if (iconMenu) {
-		iconMenu.addEventListener("click", function (e) {
-			if (bodyLockStatus) {
-				bodyLockToggle();
-				document.documentElement.classList.toggle("menu-open");
-			}
-		});
-	};
-}
-export function menuOpen() {
-	bodyLock();
-	document.documentElement.classList.add("menu-open");
-}
-export function menuClose() {
-	bodyUnlock();
-	document.documentElement.classList.remove("menu-open");
-}
-
-menuInit();
-
-export function headerScrolled() {
-	window.addEventListener('scroll', function() {
-		const header = document.querySelector('.header')
-		if (window.pageYOffset >= 150) {
-				 
-				  header.classList.add("scrolled");
-			} else {
-					  
-					  header.classList.remove("scrolled");
-					}
-	  });
-}
-headerScrolled();
-
-
-
-
-// video
-const video = document.querySelector(".c-video");
-const juice = document.querySelector(".orange-juice");
-const btn = document.getElementById("play-pause");
-
-function togglePlayPause() {
-	if (video.paused) {
-		btn.className = "pause";
-		video.play();
-	} else {
-		btn.className = "play";
-		video.pause();
-	}
-}
-
-video.onclick = function () {
-	togglePlayPause();
-};
-btn.onclick = function () {
-	togglePlayPause();
-};
-video.addEventListener("timeupdate", function () {
-	const juicePos = video.currentTime / video.duration;
-	juice.style.width = juicePos * 100 + "%";
-	if (video.ended) {
-		btn.className = "play";
-	}
-});
-
-
-// SPOLLERS
-const spollersArray = document.querySelectorAll('[data-spollers]');
-if(spollersArray.length>0) {
-	const spollersRegular = Array.from(spollersArray).filter(function (item, index, self){
-		return !item.dataset.spollers.split(","[0]);
-	});
-	if(spollersRegular.length>0){
-		initSpollers(spollersRegular);
-	}
-
-	const spollersMedia = Array.from(spollersArray).filter(function (item, index, self){
-		return item.dataset.spollers.split(","[0]);
-	});
-
-	if(spollersMedia.length>0) {
-		const breakPointsArray = [];
-		spollersMedia.forEach(item => {
-			const params = item.dataset.spollers;
-			const breakPoint = {};
-			const paramsArray = params.split(",");
-			breakPoint.value = paramsArray[0];
-			breakPoint.type = paramsArray[i] ? paramsArray[1].trim() : "max";
-			breakPoint.irem = item;
-			breakPointsArray.push(breakPoints);
-		});
-	}
-}
-// SlideToggle
