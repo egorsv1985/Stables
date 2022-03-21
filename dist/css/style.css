@@ -475,7 +475,6 @@ template {
   .subtitle {
     font-size: 16px;
     line-height: 19px;
-    margin-top: 20px;
   }
 }
 .subtitle .text {
@@ -527,7 +526,7 @@ h5 {
     background-position: center;
     background-size: cover;
     background-image: url("./../img/main/main-bg.jpg");
-    padding: 280px 0;
+    padding: 285px 0;
   }
 }
 .main::before {
@@ -563,7 +562,7 @@ h5 {
     justify-content: center;
     align-items: center;
     opacity: 1;
-    gap: 20px;
+    gap: 36px;
     height: 100%;
   }
 }
@@ -630,12 +629,22 @@ h5 {
 }
 @media (min-width: 1000px) {
   .menu {
-    padding: 80px;
+    padding: 80px 0;
+  }
+  .menu .container {
+    padding: 0;
+    max-width: 100%;
   }
 }
 .menu__wrap {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1000px) {
+  .menu__wrap {
+    flex-direction: row;
+    gap: 64px;
+  }
 }
 .menu__img {
   width: 335px;
@@ -644,17 +653,41 @@ h5 {
   max-height: 100%;
   margin-bottom: 32px;
 }
+@media (min-width: 1000px) {
+  .menu__img {
+    width: 780px;
+    height: 639px;
+    margin-bottom: 0;
+  }
+}
+.menu__box {
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+}
 .menu__desc {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-bottom: 32px;
 }
+@media (min-width: 1000px) {
+  .menu__desc {
+    gap: 18px;
+    margin-bottom: 0;
+  }
+}
 .menu__title {
   font-family: "NewBaskervilleC";
   font-weight: 400;
   font-size: 32px;
   line-height: 40px;
+}
+@media (min-width: 1000px) {
+  .menu__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 .menu__text {
   font-family: "Jost";
@@ -705,7 +738,7 @@ h5 {
 }
 @media (min-width: 1400px) {
   .header__wrapper {
-    padding: 32px 0;
+    padding: 44px 0;
   }
 }
 .header__block {
@@ -970,6 +1003,11 @@ h5 {
   flex-direction: column;
   gap: 16px;
 }
+@media (min-width: 1000px) {
+  .menu-item {
+    padding-top: 30px;
+  }
+}
 .menu-item__list {
   display: flex;
   justify-content: space-between;
@@ -977,9 +1015,20 @@ h5 {
   border-top: 1px solid #262424;
   padding-top: 16px;
 }
+@media (min-width: 1000px) {
+  .menu-item__list {
+    gap: 32px;
+  }
+}
 .menu-item__box {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1000px) {
+  .menu-item__box {
+    flex-direction: row;
+    gap: 32px;
+  }
 }
 .menu-item__subtitle {
   font-family: "NewBaskervilleC";
@@ -988,6 +1037,11 @@ h5 {
   line-height: 32px;
   color: #fff;
 }
+@media (min-width: 1000px) {
+  .menu-item__subtitle {
+    min-width: 176px;
+  }
+}
 .menu-item__desc {
   font-family: "Jost";
   font-weight: 400;
@@ -995,6 +1049,11 @@ h5 {
   line-height: 24px;
   color: #A7A7A7;
   max-width: 190px;
+}
+@media (min-width: 1000px) {
+  .menu-item__desc {
+    max-width: 196px;
+  }
 }
 .menu-item__button {
   font-family: "Jost";

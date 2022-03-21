@@ -3,6 +3,11 @@
 	flex-direction: column;
 	gap: 16px;
 
+	@media (min-width:1000px) {
+
+		padding-top: 30px;
+	}
+
 	// .menu-item__list
 	&__list {
 		display: flex;
@@ -11,12 +16,22 @@
 		border-top: 1px solid $colorDecor;
 		padding-top: 16px;
 
+		@media (min-width:1000px) {
+			gap: 32px;
+		}
+
 	}
 
 	// .menu-item__box
 	&__box {
 		display: flex;
 		flex-direction: column;
+
+		@media (min-width:1000px) {
+			flex-direction: row;
+			gap: 32px;
+		}
+
 	}
 
 	// .menu-item__subtitle
@@ -27,6 +42,11 @@
 		font-size: 24px;
 		line-height: 32px;
 		color: $textColorMain;
+
+		@media (min-width:1000px) {
+
+			min-width: 176px;
+		}
 	}
 
 	// .menu-item__desc
@@ -37,6 +57,10 @@
 		line-height: 24px;
 		color: $textColorGray;
 		max-width: 190px;
+
+		@media (min-width:1000px) {
+			max-width: 196px;
+		}
 	}
 
 	// .menu-item__button
