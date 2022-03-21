@@ -446,26 +446,6 @@ template {
   font-weight: 400;
   font-style: normal;
 }
-.button {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-  color: var(--color-text-light);
-  background-color: var(--color-accent);
-  padding: 14px 20px;
-  border: 2px solid var(--color-accent);
-  border-radius: 8px;
-  transition: all 0.2s ease-in;
-}
-.button:hover {
-  color: var(--color-text-dark);
-  background-color: var(--color-text-light);
-}
-.button:active {
-  background-color: #cccccc;
-  color: var(--color-text-dark);
-}
-
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -754,6 +734,7 @@ h5 {
   position: relative;
   top: -113px;
   height: 100vh;
+  padding: 80px 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -781,9 +762,17 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 1000px) {
+  .main__wrapper {
+    justify-content: center;
+    align-items: center;
+  }
 }
 .main__slogo {
-  display: none;
+  opacity: 0;
+  height: 360px;
 }
 @media (min-width: 1000px) {
   .main__slogo {
@@ -791,6 +780,7 @@ h5 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 1;
   }
 }
 @media (min-width: 1000px) {
@@ -815,6 +805,33 @@ h5 {
     color: #fff;
     max-width: 486px;
   }
+}
+.main__button {
+  font-family: "Jost";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--color-text-light);
+  background-color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  max-width: 187px;
+  width: 100%;
+  padding: 14px 20px;
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  transition: all 0.2s ease-in;
+}
+.main__button:hover {
+  color: var(--color-text-dark);
+  background-color: var(--color-text-light);
+}
+.main__button:active {
+  background-color: #cccccc;
+  color: var(--color-text-dark);
 }
 @media (min-width: 1000px) {
   .main__button {
