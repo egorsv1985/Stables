@@ -29,3 +29,42 @@ body {
    display: inline;
   }
 }
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+@media (min-width: 425px) {
+
+  .container {
+      max-width: 425px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+      max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 48px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+      max-width: 1440px;
+  }
+}
+
+@media (min-width: 1592px) {
+  .container {
+      max-width: 1592px;
+  }
+}
