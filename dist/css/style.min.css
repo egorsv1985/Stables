@@ -10,6 +10,23 @@
   --color-decor: #262424;
 }
 
+.footer__confidentiality {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.footer__social span {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #C7A17A;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1507,4 +1524,159 @@ img.mfp-img {
 .menu-item__button:active {
   background-color: #cccccc;
   color: var(--color-text-dark);
+}
+
+.footer {
+  background-color: #020203;
+}
+.footer__inner {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__confidentiality {
+  color: #A7A7A7;
+  display: block;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+.footer__social span {
+  margin-left: 12.5px;
+}
+.footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  max-width: 150px;
+}
+.footer__social img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.footer__social li {
+  margin-right: 8px;
+}
+.footer__social li:last-child a {
+  width: auto;
+  height: auto;
+}
+.footer__list {
+  border-top: 1px solid #262424;
+  padding: 6px 0 16px;
+  margin-top: 13px;
+}
+.footer__link {
+  margin-top: 10px;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #C7A17A;
+}
+.footer__hours {
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #fff;
+}
+.footer__list:first-child {
+  margin-top: 33px;
+}
+.footer__list:last-child {
+  border-bottom: 1px solid #262424;
+}
+.footer__map {
+  display: none;
+}
+
+.footer .banquets__title {
+  color: #fff;
+}
+
+.footer .banquets__hours {
+  color: #fff;
+}
+
+@media (min-width: 425px) {
+  .footer__confidentiality {
+    text-align: center;
+  }
+  .footer__social {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .footer__inner {
+    padding: 80px 0;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .footer__contacts {
+    width: 50%;
+    margin-right: 64px;
+  }
+  .footer__contacts .footer__confidentiality {
+    text-align: left;
+    margin-top: 32px;
+  }
+  .footer__social {
+    justify-content: flex-start;
+  }
+  .footer__social li:last-child {
+    display: none;
+  }
+  .footer__map-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+  }
+  .footer__map-wrap .footer__confidentiality {
+    text-align: right;
+    margin-top: 32px;
+  }
+  .footer__map {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer__map iframe {
+    width: 100%;
+    height: 430px;
+    border-radius: 16px;
+  }
+}
+@media (min-width: 1592px) {
+  .footer__list:first-child {
+    margin-top: 50px;
+  }
+  .footer__social {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+  .footer__social li a {
+    width: 48px;
+    height: 48px;
+  }
+  .footer__map iframe {
+    height: 455px;
+  }
+  .footer .banquets__title {
+    letter-spacing: 3px;
+    font-size: 47px;
+    margin-top: -3px;
+  }
+  .footer__list {
+    max-width: 560px;
+  }
 }

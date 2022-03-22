@@ -50,3 +50,51 @@ $colorDecor: #262424;
 	// --color-accent-dark-light: #{$colorAccentDarkLight};
 	// --color-accent-dark-light2: #{$colorAccentDarkLight2}; 
 }
+
+
+%title-text {
+    font-family: 'NewBaskervilleC';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+%description-text {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #503D3B;
+}
+
+%price-text {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+%footer-social {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #C7A17A;
+    
+}
+
+%solutionBtns-text {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7A17A;
+}
+
+%newbaskervillec-400 {
+ font-family: "NewBaskervilleCTT";
+ font-weight: 400;
+}
