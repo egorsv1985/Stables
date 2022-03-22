@@ -823,6 +823,142 @@ img.mfp-img {
   display: none;
 }
 
+.events {
+  position: relative;
+  top: -224px;
+}
+.events__title {
+  font-family: "NewBaskervilleC";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 1.9px;
+  color: #010103;
+  margin-bottom: 20px;
+}
+.events__menu {
+  display: flex;
+  gap: 24px;
+}
+.events__link {
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #808080;
+}
+.events__item {
+  border-top: 1px solid #E0E0E0;
+  margin-top: 16px;
+  padding-bottom: 16px;
+}
+.events__date {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+}
+.events__day {
+  border-right: 1px solid #E5D9D8;
+  padding-right: 10px;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #503D3B;
+}
+.events__date-box {
+  display: flex;
+  flex-direction: column;
+}
+.events__month--big {
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #503D3B;
+}
+.events__fullhday--small {
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #BA948F;
+}
+.events__img {
+  width: 335px;
+  height: 220px;
+  border-radius: 16px;
+}
+.events__description {
+  margin-bottom: 16px;
+}
+.events__titleDesc {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #010103;
+  margin: 16px 0px;
+}
+.events__desc {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.1px;
+  color: #503D3B;
+}
+.events__desc--compress {
+  letter-spacing: -0.2px;
+}
+.events__btn {
+  display: flex;
+  gap: 32px;
+}
+.events__text-box {
+  display: flex;
+  flex-direction: column;
+}
+.events__time {
+  letter-spacing: 0.1px;
+}
+.events__place {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #BA948F;
+}
+.events__button {
+  line-height: 20px;
+  color: #fff;
+  background: #C7A17A;
+  border-radius: 8px;
+  padding: 14px 31px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.events__button-link {
+  margin-top: 30px;
+  line-height: 20px;
+  color: #fff;
+  background: #C7A17A;
+  border-radius: 8px;
+  padding: 14px 31px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header {
   position: sticky;
   z-index: 50;

@@ -1,0 +1,68 @@
+&__control {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+&__btnControl {
+ padding: 14px 130px 14px 100px;
+ background: inherit;
+ border: 1px solid rgba(199, 161, 122, 0.55);
+ border-radius: 8px;
+ @extend %solutionBtns-text;
+ color: #010103;
+ margin-bottom: 15px;
+ width: 100%;
+}
+
+&__menu {
+ border: none;
+}
+.bottomMenu{
+ justify-content: space-around;
+}
+
+&__list {
+ position: relative;
+ display: inline-block;
+
+}
+.controlList{
+ margin-right: 0 10px 0 11px;
+}
+.controlList a {
+ color:#010103;
+ display: flex;
+ justify-content:center ;
+ align-items: center;
+ 
+ height: 47px;
+}
+
+.controlList:nth-child(2) a{
+ width: 47px;
+ height: 47px;
+ background: #C7A17A;
+ border-radius: 8px;
+ color:#fff;
+}
+
+&__nextControl {
+ position: absolute;
+ top: 40%;
+ width: 7px;
+ height: 7px;
+ border-bottom: 1px solid #010103;
+ border-right: 1px solid #010103;
+ transform: rotate(-45deg);
+}
+
+&__prewControl {
+ position: absolute;
+ top: 45%;
+ width: 7px;
+ height: 7px;
+ border-bottom: 1px solid #010103;
+ border-right: 1px solid #010103;
+ transform: rotate(135deg);
+}

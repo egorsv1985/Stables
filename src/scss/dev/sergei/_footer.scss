@@ -45,6 +45,11 @@
 
 @media (min-width: 1592px) {
 	.footer {
+		&__social{
+			li:last-child{
+				display: none;
+			}
+		}
 		&__list:first-child {
 			margin-top: 50px;
 		}
