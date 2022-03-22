@@ -47,6 +47,10 @@
         padding-top: 32px;
         background: $colorBGDarck;
 
+        @media (min-width: 1000px) {
+            top: 0;
+        }
+
     }
 
     &__title {

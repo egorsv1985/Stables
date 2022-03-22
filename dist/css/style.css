@@ -1108,6 +1108,11 @@ img.mfp-img {
   padding-top: 32px;
   background: #13131A;
 }
+@media (min-width: 1000px) {
+  .bonus__content {
+    top: 0;
+  }
+}
 .bonus__title {
   font-family: "NewBaskervilleC";
   font-weight: 400;
