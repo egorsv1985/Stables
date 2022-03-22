@@ -5,8 +5,8 @@
 })
 
 <body>
-
-	@@include('html/header.html', {})
+	<div class="wrapper" style="display: flex; flex-direction: column; justify-content: space-between;">
+		@@include('html/header.html', {})
 
 	@@include('html/section/main.html', {})
 	@@include('html/section/menu.html', {})
@@ -17,8 +17,9 @@
 	@@include('html/section/bonus.html', {})
 
 	@@include('html/footer.html', {})
+	</div>
 
-
+	
 	<!-- JQ-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 

@@ -72,6 +72,19 @@
 	}
 }
 
+@mixin text($fontSize, $lineHeight, $color) {
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	color: $color;
+   }
+   
+   
+//    @mixin pseudo($display: block, $pos: absolute, $content: '') {
+// 	content: $content;
+// 	display: $display;
+// 	position: $pos;
+//    }   
+
 // брейкпойнтs
 // maxW375       max-width 375px
 // minW375       min-width 375px

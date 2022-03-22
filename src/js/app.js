@@ -46,7 +46,7 @@ $(function() {
   $(document).ready(function () {
 
     $('.gallery__slider').slick({
-        // infinite: true,
+        infinite: false,
         // slidesToShow: 1,
         // slidesToScroll: 1,
         // centerMode: true,
@@ -80,7 +80,24 @@ $(function() {
 		
 	});
 
-}); 
+});
+/**для кнопок в секции Form  */
+const formBtn = document.querySelectorAll('.form__place');
+
+formBtn.forEach((item) => {
+	item.addEventListener("click", (e) => {
+		e.preventDefault();
+		formBtn.forEach((item) => {
+			item.classList.remove('active')
+		})
+		
+		item.classList.add('active')
+	})
+})
+document.querySelector('.form__place').click()
+/************************************************* */
+
+
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
 export function menuInit() {
 	let iconMenu = document.querySelector(".icon-menu");
