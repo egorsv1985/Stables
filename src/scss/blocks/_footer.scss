@@ -1,13 +1,16 @@
 .footer {
-	padding: 29px 20px;
 	background-color: #020203;
+	&__inner{
+		padding: 32px 0;
+		display: flex;
+		flex-direction: column;
+		align-items:center;
+	}
 
 	&__confidentiality {
-		span {
-			@extend %price-text;
-			color: #A7A7A7;
-			display: block;
-		}
+		@extend %price-text;
+		color: #A7A7A7;
+		display: block;
 	}
 
 	&__social {
@@ -20,30 +23,27 @@
 			@extend %footer-social;
 			margin-left: 12.5px;
 		}
-
 		a {
 			display: flex;
 			align-items: center;
-			padding: 12.5px;
-			border: 1px solid #262424;
-			border-radius: 50%;
+			justify-content: center;
 			width: 48px;
 			height: 48px;
-			justify-content: center;
+			max-width: 150px;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 
 		li {
 			margin-right: 8px
 		}
 
-		li:last-child {
-			margin-left: 12px;
-		}
-
 		li:last-child a {
 			width: auto;
 			height: auto;
-			border-radius: 24px;
 		}
 	}
 
@@ -72,7 +72,6 @@
 		letter-spacing: 0em;
 		color: #fff;
 	}
-
 
 	&__list:first-child {
 		margin-top: 33px;
@@ -105,43 +104,60 @@
 
 		&__social {
 			justify-content: center;
-
-			a {
-				padding: 15px;
-				width: auto;
-				height: auto;
-			}
 		}
 	}
 
 }
 
-
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 	.footer {
-		flex-wrap: wrap;
-		text-align: center;
-		justify-content: space-between;
-
-	}
-}
-
-@media (min-width: 1592px) {
-	.footer {
+		&__inner{
+			padding: 80px 0;
+			flex-direction: row;
+			align-items: flex-start;
+		}
+		&__contacts{
+			width: 50%;
+			margin-right: 64px;
+			.footer__confidentiality {
+				text-align: left;
+				margin-top: 32px;
+			}
+		}
 		&__social {
+			justify-content: flex-start;
 			li:last-child {
 				display: none;
 			}
 		}
+		&__map-wrap{
+			display: flex;
+			flex-direction: column;
+			flex-basis: 50%;
+			.footer__confidentiality {
+				text-align: right;
+				margin-top: 32px;
+			}
+		}
+		&__map {
+			display: flex;
+			justify-content: flex-end;
+			iframe{
+				width: 100%;
+				height: 430px;
+			border-radius: 16px;
+			}
+		}
+
+	}
+	
+}
+
+@media (min-width: 1592px) {
+	.footer {
 
 		&__list:first-child {
 			margin-top: 50px;
-		}
-
-		&__confidentiality {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
 		}
 
 		&__social {
@@ -153,6 +169,11 @@
 				height: 48px;
 			}
 		}
+		&__map {
+			iframe{
+				height: 455px;
+			}
+		}
 
 		.banquets__title {
 			letter-spacing: 3px;
@@ -160,20 +181,12 @@
 			margin-top: -3px;
 		}
 
-		display: flex;
-		padding: 80px 188px;
-		margin-top: 80px;
-		text-align: left;
+		
 
 		&__list {
 			max-width: 560px;
 		}
 
-		&__map {
-			display: block;
-			width: 592px;
-			border-radius: 16px;
-			margin-bottom: 32px;
-		}
+		
 	}
 }

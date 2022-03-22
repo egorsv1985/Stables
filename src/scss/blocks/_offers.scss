@@ -1,13 +1,13 @@
 .offers {
  background-color: #FAF5F0;
  padding: 32px 0 48px;
-  .container {
-   @extend %container;
-  }
+  // .container {
+  //  @extend %container;
+  // }
   &__top {
    padding-bottom: 28px;
    border-bottom: 1px solid #E5D9D8;
-   @include media (lg) {
+   @media (min-width:1024px) {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -18,29 +18,29 @@
    @include text(32px, 1.2, $titleColor);
    max-width: 320px;
    margin-bottom: 15px;
-   @include media (md) {
+   @media (min-width:768px) {
     font-size: 36px;
    }
-   @include media (lg) {
+   @media (min-width:1024px) {
     font-size: 40px;
     max-width: 415px;
     margin: 0;
    }
-   @include media (xl) {
+   @media (min-width:xl) {
     font-size: 48px;
     max-width: 560px
    }
   }
   &__top-text {
    margin-bottom: 16px;
-   @include media (lg) {
+   @media (min-width:1024px) {
     max-width: 382px;
    }
   }
   &__top-box {
    display: flex;
    align-items: flex-start;
-    @include media (lg) {
+    @media (min-width:1024px) {
      flex-direction: column;
      height: 95px;
      max-width: 176px;
@@ -49,13 +49,13 @@
   &__top-number {
    @include text(40px, 1.2, #C7A17A);
    padding-right: 15px;
-    @include media (lg) {
+    @media (min-width:1024px) {
      display: none;
     }
   }
   &__top-number--desktop {
    display: none;
-    @include media (lg) {
+    @media (min-width:1024px) {
      @include text(40px, 1.2, #C7A17A);
      display: block;
       span {
@@ -64,13 +64,13 @@
     }
   }
   &__top-text {
-   @include media (lg) {
+   @media (min-width:1024px) {
     margin: 0;
    }
    span {
     display: block;
     color:#C7A17A;
-    @include media (lg) {
+    @media (min-width:1024px) {
      display: none;
     }
    } 
@@ -83,7 +83,7 @@
     &:not(:last-child) {
      border-bottom: 1px solid #E5D9D8;
     }
-    @include media (lg) {
+    @media (min-width:1024px) {
      display: flex;
      justify-content: space-between;
      align-items: flex-start;
@@ -92,7 +92,7 @@
   }
   &__box-image {
    margin-bottom: 15px;
-    @include media (lg) {
+    @media (min-width:1024px) {
      width: 320px;
      height: 212px;
      margin-bottom: 0;
@@ -101,7 +101,7 @@
   }
   &__box-descr {
    min-width: 335px;
-    @include media (lg) {
+    @media (min-width:1024px) {
      max-width: 572px;
     }
   }
@@ -111,13 +111,13 @@
   }
   &__box-text {
    margin-bottom: 15px;
-    @include media (lg) {
+    @media (min-width:1024px) {
      margin-bottom: 0;
      margin-right: 10px;
     }
   }
   &__box-info {
-   @include media (lg) {
+   @media (min-width:1024px) {
     width: 280px;
    }
   }

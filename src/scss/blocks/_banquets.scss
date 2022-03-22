@@ -1,16 +1,17 @@
 .banquets {
-    padding: 32px 20px 0;
-
+    &__inner{
+        padding: 80px 0;
+    }
     &__title {
         max-width: 330px;
         margin-bottom: 20px;
-        // @extend %title-text;
+        @extend %title-text;
     }
 
     &__description {
         max-width: 315px;
         margin-bottom: 16px;
-        // @extend %description-text;
+        @extend %description-text;
     }
     &__description:last-child{
         margin-top: 16px;
@@ -119,35 +120,32 @@ letter-spacing: 0em;
     }
 
 }
-@media (min-width:1024px) {
-    .banquets{
-        &__list {
 
-            padding: 7px 170px 9px;
+@media (min-width: 1200px){
+    .banquets{
+        &__inner{
+            padding: 80px 0;
         }
-    
+        &__menu {
+            column-count: 2;
+            margin-bottom: 75px;
+            max-height: 245px;
+        }
+        &__list {
+            padding: 7px 30px 9px;
+            width: 48%;
+        }
         &__menu-title {
-            width: 400px;
-    
+            width: 240px;
+        }
+        &__menu-price {
+            margin-left: 60px;
         }
     }
-	
-}
-
-
-@media (min-width: 1440px) {
-    .banquets{
-        &__list {
-
-            padding: 7px 390px 9px;
-        }
-    }
-	
 }
 
 @media (min-width: 1592px) {
     .banquets {
-        padding: 32px 188px 0;
         &__title {
             font-size: 40px;
             line-height: 48px;

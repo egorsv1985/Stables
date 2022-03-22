@@ -1,19 +1,29 @@
 .solution {
-    padding: 27px 20px 12px;
     background-color: #FAF5F0;
-    
+
+    &__inner{
+        padding: 32px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+    }
     &__button {
         background-color: transparent;
         outline: none;
         border: 1px solid rgba(199, 161, 122, 0.55);
         border-radius: 8px;
         transition: 0.5s;
-        padding: 10px 104px;
+        padding: 10px 95px;
         margin-bottom: 8px;
-        // @extend %description-text;
+        @extend %description-text;
         color: #C7A17A;
+        max-width: 335px;
     }
-    
+
     &__button:hover {
         transition: 0.5s;
         background-color: #C7A17A;
@@ -33,8 +43,11 @@
 
 @media (min-width:425px) {
     .solution {
-        &__button {
-            width: 100%;
+        &__info{
+            align-items:center;
+        }
+        &__buttons {
+            width: 325px;
         }
 
         .banquets__description {
@@ -45,41 +58,42 @@
 
 @media (min-width: 768px) {
     .solution {
+        &__info{
+            align-items: flex-start
+        }
+        &__buttons{
+            width: 100%;
+        }
         .banquets__description {
             max-width: 100%;
         }
 
         .banquets__contacts {
-            text-align: center;
+            text-align: left;
+            margin-right: 55px;
         }
 
         &__buttonsApp {
             display: flex;
-            flex-direction: column;
         }
     }
 }
 
-@media (min-width: 1592px) {
+@media (min-width: 1024px) {
     .solution {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 80px 188px 69px;
- 
+        &__inner{
+            padding: 80px 0;
+            flex-direction: row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
         &__info {
             margin-right: 33px;
         }
 
         &__buttons {
-            display: flex;
-            padding: 12px 65px;
-            
-    
+            display: flex;       
         }
-        .banquets__contacts{
-            text-align: left;
-        }
-    
         &__button {
             padding: 10px 23px;
             width: auto;
@@ -89,13 +103,12 @@
 
         .banquets__description {
             flex-direction: column;
-            max-width: 647px;
+            max-width: 480px;
         }
 
         .banquets__contacts {
-            text-align: left;
-            margin-right: 55px;
-         }
+           
+        }
 
         .banquets__description:first-child {
             display: none;
@@ -124,10 +137,22 @@
         .application {
             color: #FFFFFF;
             background-color: #C7A17A;
-            margin: 9px  0 19px;
+            margin: 9px 0 19px;
             padding: 12px 20px;
             height: 48px;
         }
+    }
+
+}
+
+
+@media (min-width: 1592px) {
+    .solution {
+
+        .banquets__description {
+            max-width: 647px;
+        }
+
     }
 
 }

@@ -1,10 +1,10 @@
 .event-slider {
- @include media (md) {
+ @media (min-width:768px) {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  @include media (md) {
+  @media (min-width:768px) {
    margin-bottom: 32px;
   }
   }
@@ -13,7 +13,7 @@
   max-width: 370px;
   height: 222px;
   border-radius: 16px;
-  @include media (md) {
+  @media (min-width:768px) {
    max-width: 280px;
    height: 186px;
   }
