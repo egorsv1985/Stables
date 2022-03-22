@@ -698,6 +698,10 @@ h5 {
   color: #A7A7A7;
 }
 
+.gallery {
+  position: relative;
+  top: -224px;
+}
 .gallery__inner {
   padding-top: 32px;
 }
@@ -720,9 +724,11 @@ h5 {
   }
 }
 .gallery__text {
+  font-family: "Jost";
   margin-top: 16px;
   font-size: 16px;
   line-height: 26px;
+  letter-spacing: 0.1px;
   color: #503D3B;
 }
 @media (min-width: 1000px) {
@@ -783,7 +789,7 @@ h5 {
 }
 .gallery__slider-inner img {
   width: 100%;
-  height: 224px;
+  height: 250px;
 }
 @media (min-width: 1000px) {
   .gallery__slider-inner img {
