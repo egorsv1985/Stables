@@ -1,36 +1,62 @@
 .bonus {
     background-color: var(--color-bg-dark);
     padding: 32px 0;
+    position: relative;
+    top: -205px;
 
     &__wrap {
-        @include minW768 {
-            display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        @media (min-width: 1000px) {
+
             flex-direction: row-reverse;
         }
     }
 
     &__image {
-        background-image: url("./../img/bonus/phone.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50%;
-        min-height: 224px;
-        width: 100%;
+        width: 335px;
+        height: 352px;
 
-        @include minW768 {
-            background-image: url("./../img/bonus/phonebig.png");
-        }
+
+
+        border-radius: 16px;
+
     }
+
+    // .bonus__img
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
 
     &__image,
-    &__text {
-        margin-bottom: 32px;
+    &__text {}
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: -150px;
+        padding-top: 32px;
+        background: $colorBGDarck;
+
     }
 
-    &__content {}
-
     &__title {
-        margin-bottom: 40px;
+        font-family: 'NewBaskervilleC';
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 40px;
+        color: $textColorTitle;
+        letter-spacing: 1.4px;
+
     }
 
     &__list,
@@ -40,55 +66,111 @@
 
     &__list {
         margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 36px 0 26px;
 
     }
 
     &__item {
+        font-family: 'Jost';
+        font-weight: 400;
         font-size: 15px;
         line-height: 24px;
-        padding: 8px 0 24px;
+        letter-spacing: -0.2px;
+        padding: 8px 0;
         border-top: 1px solid var(--color-decor);
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
+        gap: 32px;
     }
 
     &__pocent {
+
+        font-family: 'Jost';
+
+        font-weight: 400;
+
+
         font-size: 40px;
         line-height: 48px;
         color: var(--color-text-accent);
-        margin: 0 32px;
+
     }
 
     &__text {
+        font-family: 'Jost';
+        font-weight: 400;
+        font-size: 16px;
         line-height: 26px;
+        color: $textColorGray;
+        letter-spacing: 0;
+        margin-bottom: 28px;
+
     }
 
-    &__btnWrap {
+
+    // .bonus__download
+    &__download {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    &__btn {
+    // .bonus__button
+    &__button {
         margin-bottom: 16px;
         width: 100%;
         max-width: 375px;
-        background-repeat: no-repeat;
-        text-align: left;
-        padding-left: 84px;
+        height: 48px;
+        color: $textColorMain;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.3px;
+        padding-left: 95px;
+        background: #C7A17A;
+        border-radius: 8px;
+
+
+
+
+
+        &--app,
+        &--google {
+            position: relative;
+
+            &::after {
+                @include pseudo;
+
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 50%;
+                left: 74px;
+                transform: translate(-50%, -50%);
+
+
+            }
+
+
+        }
 
         &--app {
-            background-image: url(./../../images/bonus/app_store.svg.png);
-            background-position: 15% 48%;
-            ;
+            &::after {
+                @include background (url("./../img/bonus/app.svg"));
+            }
         }
 
         &--google {
-            background-image: url(./../../images/bonus/google_play.svg.png);
-            background-position: 15% 50%;
-        }
+            &::after {
+                @include background (url("./../img/bonus/google_play.svg"));
+            }
 
+
+        }
     }
+
 
 }

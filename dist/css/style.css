@@ -847,7 +847,7 @@ img.mfp-img {
 
 .events {
   position: relative;
-  top: -224px;
+  top: -237px;
 }
 @media (min-width: 1000px) {
   .events {
@@ -897,7 +897,7 @@ img.mfp-img {
 .events__item {
   border-top: 1px solid #E0E0E0;
   margin-top: 16px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 @media (min-width: 1000px) {
   .events__item {
@@ -998,11 +998,17 @@ img.mfp-img {
 }
 .events__btn {
   display: flex;
+  justify-content: space-between;
   gap: 32px;
+}
+.events__btn--column {
+  flex-direction: column;
+  gap: 6px;
 }
 .events__text-box {
   display: flex;
   flex-direction: column;
+  gap: 6px;
 }
 .events__time {
   letter-spacing: 0.1px;
@@ -1034,7 +1040,7 @@ img.mfp-img {
   justify-content: center;
 }
 .events__button-link {
-  margin-top: 30px;
+  margin-top: 8px;
   line-height: 20px;
   color: #C7A17A;
   border-radius: 8px;
@@ -1068,76 +1074,129 @@ img.mfp-img {
 .bonus {
   background-color: var(--color-bg-dark);
   padding: 32px 0;
+  position: relative;
+  top: -205px;
 }
-@media (min-width: 768px) {
+.bonus__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 1000px) {
   .bonus__wrap {
-    display: flex;
     flex-direction: row-reverse;
   }
 }
 .bonus__image {
-  background-image: url("./../img/bonus/phone.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  min-height: 224px;
+  width: 335px;
+  height: 352px;
+  border-radius: 16px;
+}
+.bonus__img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
-@media (min-width: 768px) {
-  .bonus__image {
-    background-image: url("./../img/bonus/phonebig.png");
-  }
-}
-.bonus__image, .bonus__text {
-  margin-bottom: 32px;
+.bonus__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -150px;
+  padding-top: 32px;
+  background: #13131A;
 }
 .bonus__title {
-  margin-bottom: 40px;
+  font-family: "NewBaskervilleC";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  color: #fff;
+  letter-spacing: 1.4px;
 }
 .bonus__list, .bonus__text {
   color: var(--color-text-gray);
 }
 .bonus__list {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 36px 0 26px;
 }
 .bonus__item {
+  font-family: "Jost";
+  font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  padding: 8px 0 24px;
+  letter-spacing: -0.2px;
+  padding: 8px 0;
   border-top: 1px solid var(--color-decor);
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  gap: 32px;
 }
 .bonus__pocent {
+  font-family: "Jost";
+  font-weight: 400;
   font-size: 40px;
   line-height: 48px;
   color: var(--color-text-accent);
-  margin: 0 32px;
 }
 .bonus__text {
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 16px;
   line-height: 26px;
+  color: #A7A7A7;
+  letter-spacing: 0;
+  margin-bottom: 28px;
 }
-.bonus__btnWrap {
+.bonus__download {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.bonus__btn {
+.bonus__button {
   margin-bottom: 16px;
   width: 100%;
   max-width: 375px;
+  height: 48px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.3px;
+  padding-left: 95px;
+  background: #C7A17A;
+  border-radius: 8px;
+}
+.bonus__button--app, .bonus__button--google {
+  position: relative;
+}
+.bonus__button--app::after, .bonus__button--google::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 74px;
+  transform: translate(-50%, -50%);
+}
+.bonus__button--app::after {
   background-repeat: no-repeat;
-  text-align: left;
-  padding-left: 84px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/bonus/app.svg");
 }
-.bonus__btn--app {
-  background-image: url(./../../images/bonus/app_store.svg.png);
-  background-position: 15% 48%;
-}
-.bonus__btn--google {
-  background-image: url(./../../images/bonus/google_play.svg.png);
-  background-position: 15% 50%;
+.bonus__button--google::after {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./../img/bonus/google_play.svg");
 }
 
 .header {
