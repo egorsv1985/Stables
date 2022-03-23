@@ -25,12 +25,13 @@ $(function() {
      slidesToScroll: 1,
      responsive: [
       {
-      breakpoint: 1600,
+      breakpoint: 19000,
       settings: "unslick"
       },
       {
         breakpoint: 768,
         setting:{
+			settings: "slick",
           speed: 300,
           slidesToShow: 1,
           slidesToScroll: 1,

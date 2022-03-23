@@ -8,7 +8,10 @@
 
 <body style="background: #fff;">
 
-	@@include('html/header.html', {})
+<div class="wraper page-event">
+@@include('html/header.html', {})
+		
+@@include('html/blocks/drop-down.html', {})
 
 	@@include('html/section/events.html', {
 		"title": "Cобытия"
@@ -18,7 +21,7 @@
 
 
 	@@include('html/footer.html', {})
-		
+	</div>
 
 	<script src="./js/app.min.js"></script>
 

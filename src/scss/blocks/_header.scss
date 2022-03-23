@@ -20,10 +20,6 @@
 
     color: $textColorMain;
 
-    &:hover {
-        color: $textColorActive;
-    }
-
 
 
     @media (min-width:1000px) {
@@ -126,6 +122,9 @@
     // .header__basket-name
     &__basket-name {
         display: none;
+        &:hover {
+                color: $textColorActive;
+            }
 
         @media (min-width:1000px) {
             display: flex;
@@ -251,16 +250,57 @@
         justify-content: space-between;
         align-items: center;
         gap: 48px;
+
+        // &:hover {
+        //     color: $textColorActive;
+        // }
     }
 
     // .contacts__item
-    &__item {}
+    &__item {
+        &:hover {
+                color: $textColorActive;
+            }
+    }
 
     // .contacts__tel
     &__tel {}
 
     // .contacts__reserve
     &__reserve {}
+}
+
+.page-event {
+
+    .nav__link,
+    .contacts__item,
+    .header__basket-link,
+    .header__order {
+        color: $textColor;
+        &:hover {
+            color: $textColorActive;
+        }
+    }
+
+    .header__basket {
+        display: none;
+    }
+}
+
+.page-banquets {
+
+    .nav__link,
+    .contacts__item,
+    .header__basket-link,
+    .header__order {
+        color: $textColor;
+        &:hover {
+            color: $textColorActive;
+        }
+    }
+    .header__counter{
+        color: $textColorActive;
+    }
 }
 
 //====================================================================================================

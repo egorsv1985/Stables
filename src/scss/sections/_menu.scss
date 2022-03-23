@@ -19,10 +19,12 @@
         flex-direction: column;
 
         @media (min-width:1000px) {
-            flex-direction: row;
             gap: 64px;
+            align-items:center;
         }
-
+        @media (min-width:1200px){
+            flex-direction: row;
+        }
     }
 
     // .menu__img
@@ -34,6 +36,10 @@
         margin-bottom: 32px;
 
         @media (min-width:1000px) {
+            width: 600px;
+            height: 630px;
+        }
+        @media (min-width:1400px) {
             width: 780px;
             height: 639px;
             margin-bottom: 0;

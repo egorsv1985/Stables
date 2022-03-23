@@ -5,9 +5,10 @@
 })
 
 <body>
-	<div class="wrapper" style="display: flex; flex-direction: column; justify-content: space-between;">
+	<div class="wrapper page-start">
 		@@include('html/header.html', {})
-
+	
+	@@include('html/blocks/drop-down.html', {})
 	@@include('html/section/main.html', {})
 	@@include('html/section/menu.html', {})
 	@@include('html/section/gallery.html', {})

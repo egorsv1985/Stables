@@ -99,6 +99,11 @@
 		@media (min-width: 1000px) {
 			margin: 0;
 			max-height: 96px;
+			min-width: 130px;
+			max-width: 130px;
+		}
+
+		@media (min-width: 1200px) {
 			min-width: 170px;
 			max-width: 170px;
 		}
@@ -176,9 +181,13 @@
 		border-radius: 16px;
 
 		@media (min-width: 1000px) {
+			width: 250px;
+			height: 200px;
+		}
+
+		@media (min-width: 1200px) {
 			width: 320px;
 			height: 212px;
-
 		}
 	}
 
