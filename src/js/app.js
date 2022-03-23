@@ -99,27 +99,7 @@ document.querySelector('.form__place').click()
 
 
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
-export function menuInit() {
-	let iconMenu = document.querySelector(".icon-menu");
-	if (iconMenu) {
-		iconMenu.addEventListener("click", function (e) {
-			if (bodyLockStatus) {
-				bodyLockToggle();
-				document.documentElement.classList.toggle("menu-open");
-			}
-		});
-	};
-}
-export function menuOpen() {
-	bodyLock();
-	document.documentElement.classList.add("menu-open");
-}
-export function menuClose() {
-	bodyUnlock();
-	document.documentElement.classList.remove("menu-open");
-}
 
-menuInit();
 
 export function headerScrolled() {
 	window.addEventListener('scroll', function() {
@@ -180,3 +160,25 @@ export let bodyLock = (delay = 500) => {
 		}, delay);
 	}
 }
+
+export function menuInit() {
+	let iconMenu = document.querySelector(".icon-menu");
+	if (iconMenu) {
+		iconMenu.addEventListener("click", function (e) {
+			if (bodyLockStatus) {
+				bodyLockToggle();
+				document.documentElement.classList.toggle("menu-open");
+			}
+		});
+	};
+}
+export function menuOpen() {
+	bodyLock();
+	document.documentElement.classList.add("menu-open");
+}
+export function menuClose() {
+	bodyUnlock();
+	document.documentElement.classList.remove("menu-open");
+}
+
+menuInit();

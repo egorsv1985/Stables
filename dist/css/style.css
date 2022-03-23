@@ -875,7 +875,7 @@ img.mfp-img {
 }
 @media (min-width: 1000px) {
   .events {
-    padding-top: 70px;
+    padding: 70px 0 44px;
   }
 }
 .events__wrapper {
@@ -1100,6 +1100,11 @@ img.mfp-img {
   position: relative;
   top: -205px;
 }
+@media (min-width: 1000px) {
+  .bonus {
+    padding: 0;
+  }
+}
 .bonus__wrap {
   display: flex;
   flex-direction: column;
@@ -1110,12 +1115,20 @@ img.mfp-img {
 @media (min-width: 1000px) {
   .bonus__wrap {
     flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 64px;
   }
 }
 .bonus__image {
   width: 335px;
   height: 352px;
   border-radius: 16px;
+}
+@media (min-width: 1000px) {
+  .bonus__image {
+    width: 560px;
+    height: 657px;
+  }
 }
 .bonus__img {
   width: 100%;
@@ -1134,6 +1147,8 @@ img.mfp-img {
 @media (min-width: 1000px) {
   .bonus__content {
     top: 0;
+    max-width: 592px;
+    padding-top: 0;
   }
 }
 .bonus__title {
@@ -1143,6 +1158,12 @@ img.mfp-img {
   line-height: 40px;
   color: #fff;
   letter-spacing: 1.4px;
+}
+@media (min-width: 1000px) {
+  .bonus__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 .bonus__list, .bonus__text {
   color: var(--color-text-gray);
@@ -1167,6 +1188,11 @@ img.mfp-img {
   justify-content: flex-start;
   gap: 32px;
 }
+@media (min-width: 1000px) {
+  .bonus__item {
+    letter-spacing: 0.5px;
+  }
+}
 .bonus__pocent {
   font-family: "Jost";
   font-weight: 400;
@@ -1188,6 +1214,12 @@ img.mfp-img {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 1000px) {
+  .bonus__download {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
 .bonus__button {
   margin-bottom: 16px;
   width: 100%;
@@ -1201,6 +1233,12 @@ img.mfp-img {
   background: #C7A17A;
   border-radius: 8px;
 }
+@media (min-width: 1000px) {
+  .bonus__button {
+    max-width: 228px;
+    padding-left: 48px;
+  }
+}
 .bonus__button--app, .bonus__button--google {
   position: relative;
 }
@@ -1213,6 +1251,11 @@ img.mfp-img {
   top: 50%;
   left: 74px;
   transform: translate(-50%, -50%);
+}
+@media (min-width: 1000px) {
+  .bonus__button--app::after, .bonus__button--google::after {
+    left: 26px;
+  }
 }
 .bonus__button--app::after {
   background-repeat: no-repeat;
