@@ -94,7 +94,7 @@ formBtn.forEach((item) => {
 		item.classList.add('active')
 	})
 })
-document.querySelector('.form__place').click()
+// document.querySelector('.form__place').click()
 /************************************************* */
 
 
