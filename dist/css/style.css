@@ -2333,14 +2333,14 @@ img.mfp-img {
 .icon-menu__inner span {
   top: calc(50% - 1px);
 }
-.nav-open .icon-menu__inner span {
+.drop-down--open .icon-menu__inner span {
   transform: scale(0);
 }
-.nav-open .icon-menu__inner::before {
+.drop-down--open .icon-menu__inner::before {
   transform: rotate(-45deg);
   top: calc(50% - 1px);
 }
-.nav-open .icon-menu__inner::after {
+.drop-down--open .icon-menu__inner::after {
   transform: rotate(45deg);
   bottom: calc(50% - 1px);
 }

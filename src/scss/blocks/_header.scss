@@ -306,7 +306,7 @@
             top: calc(50% - 1px);
         }
 
-        .nav-open & {
+        .drop-down--open & {
             span {
                 transform: scale(0);
             }
