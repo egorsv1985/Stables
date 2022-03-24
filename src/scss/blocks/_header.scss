@@ -1,5 +1,5 @@
 .header {
-    position: sticky;
+    position: absolute;
     z-index: 50;
     top: 0;
     left: 0;
@@ -14,7 +14,7 @@
     line-height: 20px;
 
     text-align: center;
-    letter-spacing: 1px;
+
     text-transform: uppercase;
 
 
@@ -159,8 +159,10 @@
         @media (min-width:1000px) {
             height: 165px;
             padding: 20px 40px;
-            position: relative;
-            top: -110px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
         }
 
 

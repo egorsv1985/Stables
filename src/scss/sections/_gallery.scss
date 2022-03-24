@@ -1,6 +1,5 @@
 .gallery {
 
-
 	@media (min-width: 1000px) {
 		padding-top: 50px;
 	}
@@ -58,7 +57,7 @@
 		margin-right: 15px !important;
 
 		@media (min-width: 1000px) {
-			margin-right: 170px !important;
+			margin-right: 0 !important;
 			max-width: 100% !important;
 		}
 	}

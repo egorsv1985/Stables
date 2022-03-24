@@ -1,8 +1,16 @@
 import * as flsFunctions from "./modules/functions.js";
+import * as j from "./modules/jquery.min.js";
+import * as s from "./modules/slick.js";
+import * as m from "./modules/jquery.magnific-popup.js";
+
+
 
 // import * as flsFunctions from "./modules/delay.js";
 
 flsFunctions.isWebp();
+j.jQuery();
+s.sclick();
+m.magnificPopup();
 
 
 
@@ -102,19 +110,6 @@ formBtn.forEach((item) => {
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
 
 
-export function headerScrolled() {
-	window.addEventListener('scroll', function() {
-		const header = document.querySelector('.header')
-		if (window.pageYOffset >= 150) {
-				 
-				  header.classList.add("scrolled");
-			} else {
-					  
-					  header.classList.remove("scrolled");
-					}
-	  });
-}
-headerScrolled();
 
 // Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
 export let bodyLockStatus = true;

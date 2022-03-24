@@ -1,3 +1,7 @@
+// lib
+@import "./libs/slick-theme";
+@import "./libs/slick";
+@import "./libs/magnific-popup";
 // abstracts
 
 @import "./abstracts/mixins";
@@ -11,9 +15,6 @@
 @import "./base/sections";
 @import "./base/tipography";
 
-
-
-
 // sections
 
 @import "./sections/main";
@@ -21,6 +22,7 @@
 @import "./sections/gallery";
 @import "./sections/events";
 @import "./sections/bonus";
+
 /* page banquets*/
 @import "./sections/event";
 @import "./sections/offers";
@@ -36,7 +38,7 @@
 
 @import "./blocks/drop-down";
 @import "./blocks/menu-item";
-@import "./blocks/events-item";
+
 @import "./blocks/eventscontrol";
 
 

@@ -4,12 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.min.css">
-<!--Стили для слайдера-->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
-<!--Стили для вспалывающих окон  фотогалерея-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.1/magnific-popup.css" integrity="sha512-ZVIRM6BroVYlTuMFkNlCbt1edaJY/IpzvCILfeTUXlqJ0F/eY5IocEZR4D34tDVQa/Q0+55nq1nzgytv386qkg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/style.min.css?_v=20220324170053">
 <title>Главная</title>
 </head>
 <body style="background: #fff;">
@@ -63,11 +58,14 @@
 <span class="header__counter">2</span>
 </div>
 </div>
-<a href="index.html" class="header__logo logo"><div class="header__logo-img"></div></a>
+<a href="index.html" class="header__logo logo">
+<div class="header__logo-img"></div>
+</a>
 </div>
 </div>
 </header>
 <div class="drop-down">
+<div class="container">
 <div class="drop-down__wrap">
 <ul class="drop-down__list">
 <li class="drop-down__item">
@@ -121,19 +119,19 @@
 <li class="drop-down__item">
 <a href="#" class="drop-down__link">Заказ</a>
 </li>
-<li class="drop-down__item" >
+<li class="drop-down__item">
 <a href="#" class="drop-down__link">Холодные закуски</a>
 </li>
-<li class="drop-down__item" >
+<li class="drop-down__item">
 <a href="#" class="drop-down__link">Горячие закуски</a>
 </li>
-<li class="drop-down__item" >
+<li class="drop-down__item">
 <a href="#" class="drop-down__link">Салаты</a>
 </li>
 <li class="drop-down__item">
 <a href="#" class="drop-down__link">Супы</a>
 </li>
-<li class="drop-down__item" >
+<li class="drop-down__item">
 <a href="#" class="drop-down__link">Мясо</a>
 </li>
 <li class="drop-down__item">
@@ -182,6 +180,7 @@
 </ul>
 </div>
 </div>
+</div>
 <section class="event">
 <div class="container">
 <div class="event__inner">
@@ -194,10 +193,10 @@
 <div class="event__places">
 <div class="event__content-item">
 <div class="event-slider">
-<img class="event-slider__image" src="img/place/fireplace_room/1.jpg" alt="фото интерьера">
-<img class="event-slider__image" src="img/place/fireplace_room/2.jpg" alt="фото интерьера">
-<img class="event-slider__image" src="img/place/fireplace_room/3.jpg" alt="фото интерьера">
-<img class="event-slider__image" src="img/place/fireplace_room/4.jpg" alt="фото интерьера">
+<picture><source srcset="img/place/place1.webp" type="image/webp"><img class="event-slider__image" src="img/place/place1.jpg" alt="фото интерьера"></picture>
+<picture><source srcset="img/place/place2.webp" type="image/webp"><img class="event-slider__image" src="img/place/place2.jpg" alt="фото интерьера"></picture>
+<picture><source srcset="img/place/place3.webp" type="image/webp"><img class="event-slider__image" src="img/place/place3.jpg" alt="фото интерьера"></picture>
+<picture><source srcset="img/place/place4.webp" type="image/webp"><img class="event-slider__image" src="img/place/place4.jpg" alt="фото интерьера"></picture>
 </div>
 <div class="event__info">
 <div class="event__descr">
@@ -232,10 +231,10 @@
 </div>
 <div class="event__content-item">
 <div class="event-slider">
-<img class="event-slider__image" src="img/place/tack_room/1.jpg" alt="фото интерьера">
-<img class="event-slider__image" src="img/place/tack_room/2.jpg" alt="фото интерьера">
-<img class="event-slider__image" src="img/place/tack_room/3.jpg" alt="фото интерьера">
-<img class="event-slider__image" src="img/place/tack_room/4.jpg" alt="фото интерьера">
+<picture><source srcset="img/room/room1.webp" type="image/webp"><img class="event-slider__image" src="img/room/room1.jpg" alt="фото интерьера"></picture>
+<picture><source srcset="img/room/room2.webp" type="image/webp"><img class="event-slider__image" src="img/room/room2.jpg" alt="фото интерьера"></picture>
+<picture><source srcset="img/room/room3.webp" type="image/webp"><img class="event-slider__image" src="img/room/room3.jpg" alt="фото интерьера"></picture>
+<picture><source srcset="img/room/room4.webp" type="image/webp"><img class="event-slider__image" src="img/room/room4.jpg" alt="фото интерьера"></picture>
 </div>
 <div class="event__info">
 <div class="event__descr">
@@ -309,7 +308,7 @@
 </div>
 <div class="offers__content">
 <div class="offers__box">
-<img class="offers__box-image" src="img/offers/master_class.jpg" alt="#">
+<picture><source srcset="img/offers/master_class.webp" type="image/webp"><img class="offers__box-image" src="img/offers/master_class.jpg" alt="master class"></picture>
 <div class="offers__box-descr">
 <h5 class="offers__box-title title">Кулинарный мастер-класс
 </h5>
@@ -324,7 +323,7 @@
 </div>
 </div>
 <div class="offers__box">
-<img class="offers__box-image" src="img/offers/gastro_dinner.jpg" alt="#">
+<picture><source srcset="img/offers/gastro_dinner.webp" type="image/webp"><img class="offers__box-image" src="img/offers/gastro_dinner.jpg" alt="gastro dinner"></picture>
 <div class="offers__box-descr">
 <h5 class="offers__box-title title">Гастро-ужин
 </h5>
@@ -337,7 +336,7 @@
 </div>
 </div>
 <div class="offers__box">
-<img class="offers__box-image" src="img/offers/wine_casino.jpg" alt="#">
+<picture><source srcset="img/offers/wine_casino.webp" type="image/webp"><img class="offers__box-image" src="img/offers/wine_casino.jpg" alt="wine casino"></picture>
 <div class="offers__box-descr">
 <h5 class="offers__box-title title">Винное казино
 </h5>
@@ -350,7 +349,7 @@
 </div>
 </div>
 <div class="offers__box">
-<img class="offers__box-image" src="img/offers/karaoke_party.jpg" alt="#">
+<picture><source srcset="img/offers/karaoke_party.webp" type="image/webp"><img class="offers__box-image" src="img/offers/karaoke_party.jpg" alt="karaoke party"></picture>
 <div class="offers__box-descr">
 <h5 class="offers__box-title title">Караоке вечеринка
 </h5>
@@ -367,7 +366,7 @@
 </div>
 </div>
 <div class="offers__box">
-<img class="offers__box-image" src="img/offers/dj.jpg" alt="#">
+<picture><source srcset="img/offers/dj.webp" type="image/webp"><img class="offers__box-image" src="img/offers/dj.jpg" alt="dj"></picture>
 <div class="offers__box-descr">
 <h5 class="offers__box-title title">Вечеринка с DJ и коктейлями
 </h5>
@@ -511,22 +510,22 @@
 <ul class="footer__social">
 <li>
 <a href="#">
-<img src="./img/footer-fb.svg" alt="" class="icdon">
+<img src="img/footer/footer-fb.svg.svg" alt="facebook" class="icon">
 </a>
 </li>
 <li>
 <a href="#">
-<img src="./img/footer-instagram.svg" alt="" class="icon">
+<img src="img/footer/footer-instagram.svg" alt="instagram" class="icon">
 </a>
 </li>
 <li>
 <a href="#">
-<img src="./img/footer-vk.svg" alt="" class="icon">
+<img src="img/footer/footer-vk.svg" alt="vk" class="icon">
 </a>
 </li>
 <li>
 <a href="#">
-<img src="./img/footer-map-icon.svg" alt="" class="icon">
+<img src="img/footer/footer-map-icon.svg" alt="map" class="icon">
 </a>
 </li>
 </ul>
@@ -536,18 +535,12 @@
 <div class="footer__map">
 <iframe	src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5585.550796414809!2d27.46110805204121!3d53.947665037543146!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc4f14def1333%3A0xb0996dddbead8449!2sAstoria%20Riverside!5e0!3m2!1sru!2sby!4v1647931699926!5m2!1sru!2sby" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
-<a class="footer__confidentiality" href="#">Политика конфиденциальности</a>
+<a class="footer__confidentiality footer__confidentiality--flex-end" href="#">Политика конфиденциальности</a>
 </div>
 </div>
 </div>
 </footer>
 </div>
-<!-- JQ-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- для слайдера-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"	integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- для фотогалереи-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.1/jquery.magnific-popup.js"integrity="sha512-/sMT+YR/oDeendMTnIOU3qBBlvP1w+N1FTxUsr6JHCwVsxkklR9HkPBxZAe4Jqq04g8TdvEU0oS2l3a10iqHHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./js/app.min.js"></script>
+<script src="./js/app.min.js?_v=20220324170053"></script>
 </body>
 </html>
