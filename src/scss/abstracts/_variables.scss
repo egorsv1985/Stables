@@ -38,17 +38,17 @@ $colorDecor: #262424;
 
 
 :root {
-	--color-text-light: #{$colorTextLight};
-	--color-text-gray: #{$colorTextGray};
-	--color-text-dark: #{$colorTextDark};
-	--color-text-accent: #{$colorTextAccent};
-	--color-accent: #{$colorAccent};
-	--color-accent-dark: #{$colorAccentDark};
-	--color-bg-dark: #{$colorBGDarck};
-	--color-decor: #{$colorDecor};
-	// --color-accent-dark-second: #{$colorAccentDarkSecond}; 
-	// --color-accent-dark-light: #{$colorAccentDarkLight};
-	// --color-accent-dark-light2: #{$colorAccentDarkLight2}; 
+    --color-text-light: #{$colorTextLight};
+    --color-text-gray: #{$colorTextGray};
+    --color-text-dark: #{$colorTextDark};
+    --color-text-accent: #{$colorTextAccent};
+    --color-accent: #{$colorAccent};
+    --color-accent-dark: #{$colorAccentDark};
+    --color-bg-dark: #{$colorBGDarck};
+    --color-decor: #{$colorDecor};
+    // --color-accent-dark-second: #{$colorAccentDarkSecond}; 
+    // --color-accent-dark-light: #{$colorAccentDarkLight};
+    // --color-accent-dark-light2: #{$colorAccentDarkLight2}; 
 }
 
 
@@ -75,15 +75,7 @@ $colorDecor: #262424;
     line-height: 26px;
 }
 
-%footer-social {
-    font-family: 'Jost';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    color: #C7A17A;
-    
-}
+%footer-social {}
 
 %solutionBtns-text {
     font-family: 'Jost';
@@ -95,6 +87,6 @@ $colorDecor: #262424;
 }
 
 %newbaskervillec-400 {
- font-family: "NewBaskervilleCTT";
- font-weight: 400;
+    font-family: "NewBaskervilleCTT";
+    font-weight: 400;
 }
