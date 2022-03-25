@@ -69,10 +69,35 @@
 		font-size: 16px;
 		line-height: 20px;
 		letter-spacing: 0.1px;
-
+		position: relative;
+		max-width: max-content;
 		color: #808080;
 
-		@media (min-width: 1000px) {}
+		&::after {
+			@include pseudo;
+
+			position: absolute;
+			bottom: -20px;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: var(--color-accent);
+			opacity: 1;
+
+			transition: all 0.2s ease-in;
+			transform: scale(0);
+
+		}
+
+
+		&:hover {
+			&:after {
+				transform: scale(1);
+
+			}
+
+			color: $colorAccent;
+		}
 
 
 
@@ -206,6 +231,14 @@
 			margin-bottom: 0;
 
 		}
+	}
+
+	a &__img:hover {
+		box-shadow: 0 0 10px 2px $colorAccent;
+	}
+
+	a &__titleDesc:hover {
+		color: $colorAccent;
 	}
 
 	// .events__titleDesc
@@ -351,6 +384,16 @@
 
 		border: 1px solid rgba(199, 161, 122, 0.55);
 		border-radius: 8px;
+
+		&:hover {
+			color: $colorTextLight;
+			background-color: $colorTextAccent;
+		}
+
+		&:active {
+			background-color: hsl(0, 0%, 80%);
+			color: $colorTextLight;
+		}
 
 		@media (min-width: 1000px) {
 			display: none;
