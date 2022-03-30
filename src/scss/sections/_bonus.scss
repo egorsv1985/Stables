@@ -26,10 +26,18 @@
         width: 335px;
         height: 352px;
         border-radius: 16px;
+        background-image: url('./../img//bonus/phone.png');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
 
         @media (min-width: 1000px) {
             width: 560px;
             height: 657px;
+        }
+
+        @media (min-width: 1200px){
+            background-size: 610px 567px;
         }
 
     }
@@ -55,10 +63,13 @@
 
         @media (min-width: 1000px) {
             margin-top: 0;
-            max-width: 592px;
+            max-width: 470px;
             padding-top: 0;
         }
 
+        @media (min-width: 1200px){
+            max-width: 592px;
+        }
     }
 
     &__title {

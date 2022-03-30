@@ -1895,11 +1895,20 @@ a .events__titleDesc:hover {
   width: 335px;
   height: 352px;
   border-radius: 16px;
+  background-image: url("./../img//bonus/phone.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 @media (min-width: 1000px) {
   .bonus__image {
     width: 560px;
     height: 657px;
+  }
+}
+@media (min-width: 1200px) {
+  .bonus__image {
+    background-size: 610px 567px;
   }
 }
 .bonus__img {
@@ -1918,8 +1927,13 @@ a .events__titleDesc:hover {
 @media (min-width: 1000px) {
   .bonus__content {
     margin-top: 0;
-    max-width: 592px;
+    max-width: 470px;
     padding-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .bonus__content {
+    max-width: 592px;
   }
 }
 .bonus__title {
@@ -3610,7 +3624,7 @@ a .events__titleDesc:hover {
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0.2px;
-  color: #A7A7A7;
+  color: #C7A17A;
 }
 .footer__hours {
   font-family: "Jost";
