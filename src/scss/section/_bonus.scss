@@ -14,7 +14,7 @@
     }
 
     &__image{
-        background-image: url(./../../images/bonus/phone.png);
+        background-image: url(./../images/bonus/phone.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50%;
@@ -27,7 +27,7 @@
             background-size:50%;               
         }
         @include minW1024{
-            background-image: url(./../../images/bonus/phonebig.png);               
+            background-image: url(./../images/bonus/phonebig.png);               
             position: absolute;
             top: 0;
             right: 0;
@@ -134,14 +134,14 @@
             margin-right: 16px;
         }
         &--app{
-            background-image: url(./../../images/bonus/app_store.svg.png);
+            background-image: url(./../images/bonus/app_store.svg.png);
             background-position: 15% 48%;
             @include minW1024{
                 background-position: 18px 48%;
             }
         }
         &--google{
-            background-image: url(./../../images/bonus/google_play.svg.png);
+            background-image: url(./../images/bonus/google_play.svg.png);
             background-position: 15% 50%;
             @include minW1024{
                 background-position: 18px 50%;
